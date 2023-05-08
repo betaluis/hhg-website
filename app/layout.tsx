@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { leftNavItems, rightNavItems } from '@data/NavLinks';
 import './globals.css'
+
+import Navbar from '@components/Navbar';
+
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,48 +18,15 @@ interface Props {
     children: React.ReactNode;
 }
 
-interface NavItem {
-    href: string;
-    label: string;
-}
-
-const leftNavItems: NavItem[] = [
-    { href: "/products", label: "Products" },
-    { href: "/news", label: "News" },
-    { href: "/media", label: "Media" },
-];
-
-const rightNavItems: NavItem[] = [
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-];
-
-const NavItem = ({ href, label }: NavItem) => (
-    <Link href={href}><li className="py-2 px-3 hover:bg-gray-300">{label}</li></Link>
-)
-
 export default function RootLayout({ children }: Props) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className="min-h-screen">
-                    <nav className="bg-red-50">
-                        <div className='max-w-[1000px] m-auto flex items-center'>
-                            <Link href="/" className="pr-3">
-                                <Image src="/hPower.svg" alt="Harrison Hydra-Gen" width={30} height={30} />
-                            </Link>
-                            <ul className="mr-auto flex">
-                                {leftNavItems.map(({ href, label }) => (
-                                    <NavItem key={`${href}${label}`} href={href} label={label} />
-                                ))}
-                            </ul>
-                            <ul className="flex">
-                                {rightNavItems.map(({ href, label }) => (
-                                    <NavItem key={`${href}${label}`} href={href} label={label} />
-                                ))}
-                            </ul>
-                        </div>
-                    </nav>
+                <Navbar
+                    leftNavItems={leftNavItems}
+                    rightNavItems={rightNavItems}
+                />
+                <div className="min_h_screen">
                     {children}
                 </div>
             </body>

@@ -2,7 +2,10 @@ import Image from 'next/image'
 
 export default function Home() {
     return (
-        <main>
+        <main className="_container">
+            <div className="h_screen bg-red-400 flex-center">
+                <h1 className="">Hero Section</h1>
+            </div>
         </main>
     )
 }
