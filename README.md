@@ -12,7 +12,7 @@ This is the official repository for Harrion Hydra-Gen's website. The website sho
 
 - Next.js
 - TypeScript
-- Tailwind
+- TailwindCSS
 
 ## Contact Us
 
