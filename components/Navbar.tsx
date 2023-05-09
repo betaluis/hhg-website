@@ -1,13 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { NavItem } from "@ts/interfaces/app_interfaces";
 
-import Container from "@components/Container";
+import Container from "@/components/Container";
+import MenuIcon from './icons/MenuIcon';
+import Contact from './icons/Contact';
 
 interface Props {
     leftNavItems: NavItem[];
     rightNavItems: NavItem[];
 }
+
+interface NavListProps {
+    links: NavItem[];
+    mr?: boolean;
+    ml?: boolean;
+}
+
 
 const NavItem = ({ href, label }: NavItem) => (
     <Link href={href}>
@@ -15,6 +23,17 @@ const NavItem = ({ href, label }: NavItem) => (
     </Link>
 )
 
+const NavList = ({ links, mr, ml }: NavListProps): JSX.Element  => (
+    <ul className={`
+        flex
+        ${mr ? 'mr-auto' : ''}
+        ${ml ? 'ml-auto' : ''}
+    `}>
+        {links.map(({ href, label }) => (
+            <NavItem key={`${href}${label}`} href={href} label={label} />
+        ))}
+    </ul>
+)
 
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
     return (
@@ -22,34 +41,32 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
             {/* desktop navigation */}
             <Container>
-                <Link href="/" className="pr-3">
-                    <Image src="/hPower.svg" alt="Harrison Hydra-Gen Logo" width={30} height={30} />
-                </Link>
-                <ul className="mr-auto flex">
-                    {leftNavItems.map(({ href, label }) => (
-                        <NavItem key={`${href}${label}`} href={href} label={label} />
-                    ))}
-                </ul>
-                <ul className="flex">
-                    {rightNavItems.map(({ href, label }) => (
-                        <NavItem key={`${href}${label}`} href={href} label={label} />
-                    ))}
-                </ul>
+                <div className="hidden lg:flex items-center justify-between">
+                    <Link href="/" className="pr-3">
+                        <Image src="/hPower.svg" alt="Harrison Hydra-Gen Logo" width={30} height={30} />
+                    </Link>
+                    <NavList links={leftNavItems} mr={true} />
+                    <NavList links={rightNavItems} />
+                </div>
             </Container>
 
             {/* mobile navigation */}
             <Container>
-                <Image
-                    src="/logo.png"
-                    alt="Harrison Hydra-Gen logo"
-                    width={30}
-                    height={30}
-                />
-                <ul className="flex">
-                    {rightNavItems.map(({ href, label }) => (
-                        <NavItem key={`${href}${label}`} href={href} label={label} />
-                    ))}
-                </ul>
+                <div className="flex items-center justify-center lg:hidden py-2">
+                    <div className="">
+                        <MenuIcon />
+                    </div>
+                    <Image
+                        src="/logo.png"
+                        alt="Harrison Hydra-Gen logo"
+                        width={80}
+                        height={30}
+                        className="mr-auto ml-auto"
+                    />
+                    <Link href="/contact">
+                        <Contact />
+                    </Link>
+                </div>
             </Container>
         </nav>
     )
