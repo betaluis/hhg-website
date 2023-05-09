@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 import Container from "@/components/Container";
-import MenuIcon from './icons/MenuIcon';
-import Contact from './icons/Contact';
+import MobileMenu from "@/components/MobileMenu";
+import Contact from "@/components/icons/Contact";
 
 interface Props {
     leftNavItems: NavItem[];
@@ -36,6 +36,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element  => (
 )
 
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
+
     return (
         <nav className="bg-slate-100">
 
@@ -53,9 +54,7 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
             {/* mobile navigation */}
             <Container>
                 <div className="flex items-center justify-center lg:hidden py-2">
-                    <div className="">
-                        <MenuIcon />
-                    </div>
+                    <MobileMenu />
                     <Image
                         src="/logo.png"
                         alt="Harrison Hydra-Gen logo"
