@@ -38,6 +38,16 @@ body {
     min-height: calc(100vh - 40px);
 }
 
+@media screen and (max-width: 1040px) {
+    .h_screen {
+        height: calc(100vh - 49px);
+    }
+
+    .min_h_screen {
+        min-height: calc(100vh - 49px);
+    }
+}
+
 /* Flex utils */
 
 .flex-center {
