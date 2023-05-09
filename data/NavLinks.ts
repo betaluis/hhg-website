@@ -1,5 +1,3 @@
-import { NavItem } from "@ts/interfaces/app_interfaces";
-
 export const leftNavItems: NavItem[] = [
     { href: "/products", label: "Products" },
     { href: "/news", label: "News" },

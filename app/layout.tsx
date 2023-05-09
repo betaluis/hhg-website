@@ -1,7 +1,7 @@
-import { leftNavItems, rightNavItems } from '@data/NavLinks';
+import { leftNavItems, rightNavItems } from '@/data/NavLinks';
 import './globals.css'
 
-import Navbar from '@components/Navbar';
+import Navbar from '@/components/Navbar';
 
 import { Inter } from 'next/font/google'
 
