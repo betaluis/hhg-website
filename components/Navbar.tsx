@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Container from "@/components/Container";
 import MobileMenu from "@/components/MobileMenu";
-import Contact from "@/components/icons/Contact";
+import ContactIcon from "@/components/icons/ContactIcon";
 
 interface Props {
     leftNavItems: NavItem[];
@@ -52,8 +52,8 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
             </Container>
 
             {/* mobile navigation */}
-            <Container>
-                <div className="flex items-center justify-center lg:hidden py-2">
+            <Container fixed={true}>
+                <div className="flex items-center justify-center py-2 lg:hidden">
                     <MobileMenu />
                     <Image
                         src="/logo.png"
@@ -63,7 +63,7 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
                         className="mr-auto ml-auto"
                     />
                     <Link href="/contact">
-                        <Contact />
+                        <ContactIcon />
                     </Link>
                 </div>
             </Container>
