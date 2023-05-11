@@ -17,6 +17,12 @@ interface Props {
 }
 
 export default function RootLayout({ children }: Props) {
+
+    const rgb = () => `
+        rgb(${Math.floor(Math.random() * 255)},
+            ${Math.floor(Math.random() * 255)},
+            ${Math.floor(Math.random() * 255)})`
+    
     return (
         <html lang="en">
             <body className={inter.className}>
@@ -24,7 +30,13 @@ export default function RootLayout({ children }: Props) {
                     leftNavItems={leftNavItems}
                     rightNavItems={rightNavItems}
                 />
-                <div className="min_h_screen">
+                <div className={`min_h_screen pt-8`} style={{ backgroundColor: rgb()}}>
+                    {children}
+                </div>
+                <div className={`min_h_screen pt-8`} style={{ backgroundColor: rgb()}}>
+                    {children}
+                </div>
+                <div className={`min_h_screen pt-8`} style={{ backgroundColor: rgb()}}>
                     {children}
                 </div>
             </body>
