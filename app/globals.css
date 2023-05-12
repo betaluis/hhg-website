@@ -38,14 +38,9 @@
     }
 }
 
-/* Flex utils */
+/* Custom Utils */
 
-.flex-center {
-    @apply flex items-center justify-center;
+.flip-y {
+    transform: rotateY(180deg);
 }
-.flex-start {
-    @apply flex items-start justify-start;
-}
-.flex-end {
-    @apply flex items-end justify-end;
-}
+
