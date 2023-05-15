@@ -21,7 +21,7 @@ const MobileLink = ({ label, icon }: MobileLinkProps) => {
                 <div className="">
                     {icon}
                 </div>
-                <span>{label}</span>
+                <span className="font-bold">{label}</span>
             </li>
         </Link>
     )
@@ -43,7 +43,7 @@ const MobileProductList = () => {
             {productsNavItems.map((item, index) => (
                 <Link href={item.href} key={index} className="grid place-items-center">
                     <div className="pb-4">{item.icon}</div>
-                    <div className="text-center">{item.label}</div>
+                    <div className="text-center font-bold">{item.label}</div>
                 </Link>
             ))}
         </ul>

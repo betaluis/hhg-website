@@ -3,10 +3,6 @@ import './globals.css'
 
 import Navbar from '@/components/Navbar';
 
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata = {
     title: "Harrison Hydra-Gen",
     description: "Discover Harrison Hydra-Gen, the world's leading manufacturer of high-quality hydraulic generators. With over 50 years of experience, we provide reliable and cost-effective solutions for all your power generation needs. Choose Harrison Hydra-Gen and experience the proven dependability and exceptional service that sets us apart.",
@@ -25,7 +21,7 @@ export default function RootLayout({ children }: Props) {
     
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body>
                 <Navbar
                     leftNavItems={leftNavItems}
                     rightNavItems={rightNavItems}
