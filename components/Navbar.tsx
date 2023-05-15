@@ -60,7 +60,7 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
                         alt="Harrison Hydra-Gen logo"
                         width={80}
                         height={30}
-                        className="mr-auto ml-auto"
+                        className="mr-auto ml-auto w-auto h-auto"
                     />
                     <Link href="/contact">
                         <ContactIcon />

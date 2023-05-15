@@ -3,8 +3,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { industriesNavItems } from "@/data/NavLinks";
+import { industriesNavItems, productsNavItems } from "@/data/NavLinks";
 import MenuIcon from '@/components/icons/MenuButton';
+import Button from '@/components/Button';
+import Divider from './Divider';
 
 
 type MobileLinkProps = {
@@ -25,11 +27,24 @@ const MobileLink = ({ label, icon }: MobileLinkProps) => {
     )
 }
 
-const MobileNavList = () => {
+const MobileIndustries = () => {
     return (
         <ul className="p-8 grid grid-cols-1 min-[360px]:grid-cols-2 gap-8">
             {industriesNavItems.map((item, index) => (
                 <MobileLink key={index} label={item.label} icon={item.icon} />
+            ))}
+        </ul>
+    )
+}
+
+const MobileProductList = () => {
+    return (
+        <ul className="p-8 grid grid-cols-2 min-[360px]:grid-cols-3 gap-x-4 gap-y-8">
+            {productsNavItems.map((item, index) => (
+                <Link href={item.href} key={index} className="grid place-items-center">
+                    <div className="pb-4">{item.icon}</div>
+                    <div className="text-center">{item.label}</div>
+                </Link>
             ))}
         </ul>
     )
@@ -67,26 +82,17 @@ const MobileMenu = () => {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.2, ease: 'easeInOut' }}
                             >
-                                <div className="max-w-2xl m-auto">
-                                    <ul className="p-8 grid grid-cols-1 min-[360px]:grid-cols-2 gap-8">
-                                        <li className="p-8 bg-gray-400 grid place-items-center rounded">Item 1</li>
-                                        <li className="p-8 bg-gray-400 grid place-items-center rounded">Item 2</li>
-                                        <li className="p-8 bg-gray-400 grid place-items-center rounded">Item 3</li>
-                                        <li className="p-8 bg-gray-400 grid place-items-center rounded">Item 4</li>
-                                    </ul>
-                                    <div className="h-[2px] w-full bg-gray-200"></div>
-                                    <MobileNavList />
-                                    {/*
-                                    <MobileLink label='Fire & Rescue'/>
-                                    <MobileLink label='Ambulance'/>
-                                    <MobileLink label='Construction'/>
-                                    <MobileLink label="Oil & Gas" />
-                                    <MobileLink label="Wildland" />
-                                    <MobileLink label="Marine & Fishing" />
-                                    <MobileLink label="Paving" />
-                                    <MobileLink label="Military" />
-                                    */}
-                                    <div className="h-[2px] w-full bg-gray-200"></div>
+                                <div className="max-w-2xl m-auto py-4 md:py-12">
+                                    <MobileProductList />
+                                    <div className="px-8 pb-8 md:px-0">
+                                        <Button 
+                                            label="All Products"
+                                            href="/products"
+                                        />
+                                    </div>
+                                    <Divider />
+                                    <MobileIndustries />
+                                    <Divider />
                                 </div>
                             </motion.div>
                         </div>

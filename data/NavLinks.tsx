@@ -1,4 +1,5 @@
 import { ScissorLift, FireTruck, Ambulance, Construction, OilGas, Military } from "@/components/icons/IndustryIcons";
+import { BatteryIcon, BeltDrivenIcon, GeneratorIcon } from "@/components/icons/ProductIcons";
 
 export const leftNavItems: NavItem[] = [
     { href: "/products", label: "Products" },
@@ -18,4 +19,10 @@ export const industriesNavItems: NavItem[] = [
     { href: "/construction", label: "Construction", icon: <Construction /> },
     { href: "/oilGas", label: "Oil & Gas", icon: <OilGas /> },
     { href: "/military", label: "Military", icon: <Military /> },
-]
+];
+
+export const productsNavItems: NavItem[] = [
+    { href: "/hydraulic-generators", label: "Hydraulic Generator", icon: <GeneratorIcon /> },
+    { href: "/battery-power", label: "Battery Power", icon: <BatteryIcon /> },
+    { href: "/belt-driven", label: "Belt Driven", icon: <BeltDrivenIcon /> },
+];
