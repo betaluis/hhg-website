@@ -38,7 +38,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element  => (
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
     return (
-        <nav className="">
+        <nav className="bg-slate-100">
 
             {/* desktop navigation */}
             <Container>
