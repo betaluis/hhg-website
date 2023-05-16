@@ -1,4 +1,4 @@
-const size = 20;
+const size = 28;
 
 const Contact = () => {
     return (
