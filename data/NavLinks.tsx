@@ -26,3 +26,9 @@ export const productsNavItems: NavItem[] = [
     { href: "/battery-power", label: "Battery Power", icon: <BatteryIcon /> },
     { href: "/belt-driven", label: "Belt Driven", icon: <BeltDrivenIcon /> },
 ];
+
+export const extraMobileNavLinks: NavItem[] = [
+    { href: "/news", label: "News" },
+    { href: "/team", label: "Team" },
+    { href: "/about", label: "About" },
+];

@@ -17,7 +17,7 @@ const Button = ({ type = "primary", label, href, className }: ButtonProps) => {
         )
     } else {
         return (
-            <Link href={href} className={`block text-center py-3 bg-green-600 text-white rounded ${className}`}>
+            <Link href={href} className={`block text-center py-3 bg-green-600 text-white rounded hover:bg-gradient-to-b from-green-500 ${className}`}>
                 {label}
             </Link>
         ) 
