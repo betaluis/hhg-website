@@ -15,19 +15,24 @@ interface LinksProps {
     cols: 1 | 2 | 3;
 }
 
-const Grid = ({ children, cols, colsInMobile }: { children: React.ReactNode, cols: number, colsInMobile: number }) => {
+interface GridProps {
+    children: React.ReactNode,
+    classes: string;
+}
+
+const Grid = ({ children, classes }: GridProps ) => {
     return (
-        <div className={`p-8 grid grid-cols-${colsInMobile} min-[360px]:grid-cols-${cols} gap-4`}>
+        <div className={`p-8 grid gap-4 ${classes}`}>
             {children}
         </div>
     )
 }
 
-const MobileLinks = ({ links, colsInMobile, cols, iconLayout }: LinksProps) => {
+const MobileLinks = ({ links, iconLayout }: LinksProps) => {
     
     if (iconLayout === "col") {
         return (
-            <Grid cols={cols} colsInMobile={colsInMobile}>
+            <Grid classes={"grid-cols-1 min-[360px]:grid-cols-3"}>
                 {productsNavItems.map((item, index) => (
                     <Link href={item.href} key={index} className="grid place-items-center mb-8">
                         <div className="pb-4">{item.icon}</div>
@@ -38,7 +43,7 @@ const MobileLinks = ({ links, colsInMobile, cols, iconLayout }: LinksProps) => {
         )
     } else if (iconLayout === "row") {
         return (
-            <Grid cols={cols} colsInMobile={colsInMobile}>
+            <Grid classes={"grid-cols-1 min-[360px]:grid-cols-2"}>
                 {links.map((link, index) => (
                     <Link key={index} href={link.href}>
                         <li className="flex items-center justify-start gap-4">
@@ -53,10 +58,10 @@ const MobileLinks = ({ links, colsInMobile, cols, iconLayout }: LinksProps) => {
         )
     } else {
         return (
-            <Grid cols={cols} colsInMobile={colsInMobile}>
+            <Grid classes={"grid-cols-3 min-[360px]:grid-cols-3"}>
                 {links.map((link, index) => (
                     <Link key={index} href={link.href}>
-                        <li className="flex items-center justify-start gap-4 text-sm">
+                        <li className="flex items-center justify-center gap-4 text-sm">
                             {link.label}
                         </li>
                     </Link>
