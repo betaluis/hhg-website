@@ -12,25 +12,47 @@ interface Props {
 
 interface NavListProps {
     links: NavItem[];
+    subList?: NavItem[];
     mr?: boolean;
     ml?: boolean;
 }
 
+const SubList = ({ items }: { items: NavItem[] }) => {
+    return (
+        <ul className="rounded-lg triangle absolute -left-12 top-14 bg-slate-100 min-w-[300px] p-4 opacity-0 pointer-events-none before:block before:h-4 before:w-full before:absolute before:-top-4 before:left-0 group-hover:pointer-events-auto group-hover:opacity-100 duration-150 transition-opacity">
+            {items && items.map(({ href, label, }, index) => (
+                <Link key={index} href={href}>
+                    <li className="py-3 px-3 rounded-lg hover:bg-gray-300">{label}</li>
+                </Link>
+            ))}
+        </ul>
+    )
+}
 
-const NavItem = ({ href, label }: NavItem) => (
-    <Link href={href}>
-        <li className="py-2 px-3 hover:bg-gray-300">{label}</li>
-    </Link>
+const NavItem = ({ href, label, sublist }: NavItem) => (
+    <div className="relative group">
+        <Link href={href}>
+            <li className="py-2 px-3 hover:bg-gray-300">
+                {label}
+            </li>
+        </Link>
+        {sublist && <SubList items={sublist} />}
+    </div>
 )
 
-const NavList = ({ links, mr, ml }: NavListProps): JSX.Element  => (
+const NavList = ({ links, mr, ml }: NavListProps): JSX.Element => (
     <ul className={`
         flex
         ${mr ? 'mr-auto' : ''}
         ${ml ? 'ml-auto' : ''}
     `}>
-        {links.map(({ href, label }) => (
-            <NavItem key={`${href}${label}`} href={href} label={label} />
+        {links.map(({ href, label, sublist }) => (
+            <NavItem
+                key={`${href}${label}`}
+                href={href}
+                label={label}
+                sublist={sublist}
+            />
         ))}
     </ul>
 )

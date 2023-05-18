@@ -23,7 +23,7 @@ body {
 }
 
 ._container {
-    @apply mx-auto px-[20px] max-w-[1000px];
+    @apply mx-auto px-[20px] max-w-[1000px] md:px-0;
 }
 
 .h_screen {
@@ -50,3 +50,18 @@ body {
     transform: rotateY(180deg);
 }
 
+.triangle::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 28%;
+    border-top: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-left: 20px solid transparent;
+    transform: rotate(225deg);
+    @apply border-b-slate-100 border-b-[20px];
+}
+
+.fade-out {
+    transition: opacity 0.2s ease-in-out;
+}
