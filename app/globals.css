@@ -75,7 +75,7 @@ body {
     -moz-background-size: 600px auto;
     -o-background-size: 600px auto;
 }
-@media screen and (max-width: 1040px) {
+@media screen and (min-width: 1040px) {
     .bg_people {
         background-position: 1000px 30px;
         background-size: 500px auto;
