@@ -30,7 +30,7 @@ const MobileLinks = ({ links, iconLayout }: LinksProps) => {
     
     if (iconLayout === "col") {
         return (
-            <Grid classes={"grid-cols-1 min-[360px]:grid-cols-3"}>
+            <Grid classes={"max-[360px]:grid-cols-1 min-[360px]:grid-cols-3"}>
                 {productsNavItems.map((item, index) => (
                     <Link href={item.href} key={index} className="grid place-items-center mb-8">
                         <div className="pb-4">{item.icon?.lg}</div>
@@ -41,7 +41,7 @@ const MobileLinks = ({ links, iconLayout }: LinksProps) => {
         )
     } else if (iconLayout === "row") {
         return (
-            <Grid classes={"grid-cols-1 min-[360px]:grid-cols-2 md:grid-cols-3"}>
+            <Grid classes={"max-[360px]:grid-cols-1 min-[360px]:grid-cols-2 md:grid-cols-3"}>
                 {links.map((link, index) => (
                     <div key={index} className="flex items-center justify-start gap-4">
                         <Link href={link.href} className="flex items-center justify-center">
@@ -58,7 +58,7 @@ const MobileLinks = ({ links, iconLayout }: LinksProps) => {
         )
     } else {
         return (
-            <Grid classes={"grid-cols-2 min-[360px]:grid-cols-2"}>
+            <Grid classes={"max-[360px]:grid-cols-2 min-[360px]:grid-cols-2"}>
                 {links.map((link, index) => (
                     <div key={index} className="flex items-center justify-start text-sm">
                         <Link  href={link.href}>
