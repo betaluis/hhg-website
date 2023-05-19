@@ -1,7 +1,7 @@
 type NavItem = {
     href: string;
     label: string;
-    icon?: JSX.Element;
+    icon?: { sm: JSX.Element, lg: JSX.Element };
     sublist?: NavItem[];
     image?: ImageType;
 }
