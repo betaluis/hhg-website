@@ -69,33 +69,15 @@ body {
 .bg_people {
     background-image: url('/people.png');
     background-repeat: no-repeat;
-    background-position: 630px 30px;
-    -webkit-background-position: position 630px 30px;
-    -moz-background-position: position 630px 30px;
-    -o-background-position: position 630px 30px;
-    background-size: 600px auto;
-    -webkit-background-size: 600px auto;
-    -moz-background-size: 600px auto;
-    -o-background-size: 600px auto;
-}
-@media screen and (max-width: 900px) {
-    .bg_people {
-        background-position: 450px 180px;
-        -webkit-background-position: position 630px 30px;
-        -moz-background-position: position 630px 30px;
-        -o-background-position: position 630px 30px;
-        background-size: 400px auto;
-        -webkit-background-size: 400px auto;
-        -moz-background-size: 400px auto;
-        -o-background-size: 400px auto;
-    }
+    background-position: 480px 40px;
+    background-size: 550px auto;
+    -webkit-background-size: 550px auto;
+    -moz-background-size: 550px auto;
+    -o-background-size: 550px auto;
 }
 @media screen and (max-width: 746px) {
     .bg_people {
         background-position: 380px 280px;
-        -webkit-background-position: position 630px 30px;
-        -moz-background-position: position 630px 30px;
-        -o-background-position: position 630px 30px;
         background-size: 400px auto;
         -webkit-background-size: 400px auto;
         -moz-background-size: 400px auto;
