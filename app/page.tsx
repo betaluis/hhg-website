@@ -20,8 +20,20 @@ export default function Home() {
                             </Text>
                         </div>
                         <div className="mt-2 flex flex-col sm:flex-row gap-4">
-                            <Button label="Products" href="/products" type="secondary" className="bg-slate-600 px-8 text-xl bg-gradient-to-t from-slate-700 drop-shadow-[0_2px_0_rgba(30,40,20,1)] hover:from-slate-600" />
-                            <Button label="Get in touch" href="/" type="secondary" className="bg-green-400 px-8 text-xl bg-gradient-to-t from-green-500 drop-shadow-[0_2px_0_rgba(22,101,52,1)] hover:from-green-400" />
+                            <Button 
+                                label="Products" 
+                                href="/products" 
+                                type="secondary" 
+                                bold={true}
+                                className="bg-slate-600 px-8 text-xl bg-gradient-to-t from-slate-700 drop-shadow-[0_2px_0_rgba(30,40,20,1)] hover:from-slate-600"
+                            />
+                            <Button 
+                                label="Get in touch" 
+                                href="/" 
+                                type="secondary" 
+                                bold={true}
+                                className="bg-green-400 px-8 bg-gradient-to-t from-green-500 drop-shadow-[0_2px_0_rgba(22,101,52,1)] hover:from-green-400" 
+                            />
                         </div>
                     </div>
                 </ Container>

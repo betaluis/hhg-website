@@ -67,7 +67,7 @@ body {
 }
 
 .bg_people {
-    background-image: url('/people.png');
+    background-image: url('/people-min.png');
     background-repeat: no-repeat;
     background-position: 480px 40px;
     background-size: 550px auto;
@@ -82,7 +82,7 @@ body {
 }
 @media screen and (max-width: 639px) {
     .bg_people {
-        background: url('/military.png') right 380px no-repeat, url("/construction-worker.png") left 380px no-repeat, url("/fire.png") 50% 380px no-repeat;
+        background: url('/military-min.png') right 390px no-repeat, url("/construction-worker-min.png") left 390px no-repeat, url("/fire-min.png") 50% 390px no-repeat;
         background-size: 140px auto;
         -webkit-background-size: 140px auto;
         -moz-background-size: 140px auto;
@@ -91,7 +91,7 @@ body {
 }
 @media screen and (max-width: 371px) {
     .bg_people {
-        background: url('/military.png') right 420px no-repeat, url("/construction-worker.png") left 420px no-repeat, url("/fire.png") center 420px no-repeat;
+        background: url('/military-min.png') right 450px no-repeat, url("/construction-worker-min.png") left 450px no-repeat, url("/fire-min.png") center 450px no-repeat;
         background-size: 140px auto;
         -webkit-background-size: 140px auto;
         -moz-background-size: 140px auto;

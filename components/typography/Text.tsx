@@ -2,11 +2,20 @@ interface TextProps {
     children: React.ReactNode;
     color?: "light" | "dark";
     classes?: string;
+    bold?: boolean;
 }
 
-export const Text = ({ children, color = "light", classes }: TextProps) => {
+export const Text = ({ children, color = "light", classes, bold }: TextProps) => {
     return (
-        <p className={`text-center sm:text-left text-sm sm:text-base lg:text-lg ${color === "light" ? "text-slate-100" : "text-slate-900"} ${classes}`}>
+        <p className={`text-center sm:text-left text-sm sm:text-base lg:text-lg ${color === "light" ? "text-slate-100" : "text-slate-900"} ${classes} ${bold ? "font-bold" : ""}`}>
+            {children}
+        </p>
+    )
+}
+
+export const AccentText = ({ children, color = "light", classes, bold }: TextProps) => {
+    return (
+        <p className={`text-center sm:text-left text-lg sm:text-base lg:text-lg ${color === "light" ? "text-slate-100" : "text-slate-900"} ${classes} ${bold ? "font-bold" : ""}`}>
             {children}
         </p>
     )
