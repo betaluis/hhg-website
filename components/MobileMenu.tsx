@@ -10,9 +10,7 @@ import Divider from './Divider';
 
 interface LinksProps {
     links: NavItem[]; 
-    colsInMobile: 1 | 2 | 3; 
     iconLayout: "col" | "row" | undefined 
-    cols: 1 | 2 | 3;
 }
 
 interface GridProps {
@@ -22,7 +20,7 @@ interface GridProps {
 
 const Grid = ({ children, classes }: GridProps ) => {
     return (
-        <div className={`p-8 grid gap-4 ${classes}`}>
+        <div className={`p-8 md:p-0 md:py-8 grid gap-4 ${classes}`}>
             {children}
         </div>
     )
@@ -43,28 +41,32 @@ const MobileLinks = ({ links, iconLayout }: LinksProps) => {
         )
     } else if (iconLayout === "row") {
         return (
-            <Grid classes={"grid-cols-1 min-[360px]:grid-cols-2"}>
+            <Grid classes={"grid-cols-1 min-[360px]:grid-cols-2 md:grid-cols-3"}>
                 {links.map((link, index) => (
-                    <Link key={index} href={link.href}>
-                        <li className="flex items-center justify-start gap-4">
-                            <div>
+                    <div key={index} className="flex items-center justify-start gap-4">
+                        <Link href={link.href} className="flex items-center justify-center">
+                            <div className="mr-4">
                                 {link.icon?.sm}
                             </div>
-                            <span className="font-bold text-sm">{link.label}</span>
-                        </li>
-                    </Link>
+                            <li className="list-none">
+                                <span className="font-bold text-sm">{link.label}</span>
+                            </li>
+                        </Link>
+                    </div>
                 ))}
             </Grid>
         )
     } else {
         return (
-            <Grid classes={"grid-cols-2 min-[360px]:grid-cols-4"}>
+            <Grid classes={"grid-cols-2 min-[360px]:grid-cols-2"}>
                 {links.map((link, index) => (
-                    <Link key={index} href={link.href}>
-                        <li className="flex items-center justify-start gap-4 text-sm">
-                            {link.label}
-                        </li>
-                    </Link>
+                    <div key={index} className="flex items-center justify-start text-sm">
+                        <Link  href={link.href}>
+                            <li className="list-none">
+                                {link.label}
+                            </li>
+                        </Link>
+                    </div>
                 ))}
             </Grid>
         )
@@ -104,17 +106,17 @@ const MobileMenu = () => {
                                 transition={{ duration: 0.2, ease: 'easeInOut' }}
                             >
                                 <div className="max-w-2xl m-auto py-4 md:py-12">
-                                    <MobileLinks links={productsNavItems} colsInMobile={2} cols={3} iconLayout="col" />
-                                    <div className="px-8 pb-8 md:px-0">
+                                    <MobileLinks links={productsNavItems} iconLayout="col" />
+                                    <div className="-mt-8 px-8 pb-8 md:px-0">
                                         <Button 
                                             label="All Products"
                                             href="/products"
                                         />
                                     </div>
                                     <Divider />
-                                    <MobileLinks links={industriesNavItems} colsInMobile={1} cols={2} iconLayout="row" />
+                                    <MobileLinks links={industriesNavItems} iconLayout="row" />
                                     <Divider />
-                                    <MobileLinks links={extraMobileNavLinks} colsInMobile={3} cols={3} iconLayout={undefined} />
+                                    <MobileLinks links={extraMobileNavLinks} iconLayout={undefined} />
                                 </div>
                             </motion.div>
                         </div>

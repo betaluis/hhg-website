@@ -67,7 +67,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element => (
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
     return (
-        <nav className="bg-blue-100">
+        <nav className="bg-slate-100">
 
             {/* desktop navigation */}
             <Container>
