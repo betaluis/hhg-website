@@ -7,8 +7,8 @@ export default function Home() {
     return (
         <>
             <section className="bg-green-600 relative">
-                <Container>
-                    <div className="py-24">
+                <Container classes="bg_people">
+                    <div className="pt-24 pb-36 sm:pb-24">
                         <div className="pt-8 sm:pt-4 lg:pt-0">
                             <Heading size="h1" color="light">
                                 We are mobile power.
