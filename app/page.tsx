@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
+import { Text } from "@/components/typography/Text";
 
 export default function Home() {
     return (
@@ -8,12 +9,12 @@ export default function Home() {
             <section className="bg-green-600 relative">
                 <Container>
                     <div className="py-24">
-                        <h1 className="text-slate-100 font-black text-[4rem] max-w-[800px]">
+                        <h1 className="text-slate-100 font-bold text-[2rem] text-center md:text-[2rem] lg:text-[4rem] max-w-[800px]">
                             We are mobile power.
                         </h1>
-                        <p className="text-white text-lg max-w-lg">
+                        <Text color="light">
                             Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                        </p>
+                        </Text>
                         <div className="mt-8 flex gap-4">
                             <Button label="Products" href="/products" type="secondary" className="bg-slate-600 px-8 text-xl bg-gradient-to-t from-slate-700 drop-shadow-[0_2px_0_rgba(30,40,20,1)] hover:from-slate-600" />
                             <Button label="Get in touch" href="/" type="secondary" className="bg-green-400 px-8 text-xl bg-gradient-to-t from-green-500 drop-shadow-[0_2px_0_rgba(22,101,52,1)] hover:from-green-400" />
