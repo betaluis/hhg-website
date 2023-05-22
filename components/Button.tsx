@@ -19,13 +19,13 @@ const Button = ({
 }: ButtonProps) => {
 
     const buttonClass = `
-        block text-center py-3 
+        block text-center py-4
         text-white rounded cursor-pointer 
         ${className} 
         `
 
     const textClass = `
-        text-center sm:text-base lg:text-lg 
+        text-center sm:text-xl
         ${textColor === "light" ? "text-slate-100" : "text-slate-900"} 
         ${bold ? "font-bold" : ""}
         ${largeMobile ? "text-lg" : "text-sm"}
