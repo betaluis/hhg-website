@@ -111,6 +111,8 @@ const MobileMenu = () => {
                                         <Button 
                                             label="All Products"
                                             href="/products"
+                                            textColor="light"
+                                            className="bg-green-600 hover:bg-gradient-to-t from-green-600 to-green-500"
                                         />
                                     </div>
                                     <Divider />

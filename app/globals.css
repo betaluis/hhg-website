@@ -89,7 +89,7 @@ body {
         -o-background-size: 140px auto;
     }
 }
-@media screen and (max-width: 371px) {
+@media screen and (max-width: 390px) {
     .bg_people {
         background: url('/military-min.png') right 450px no-repeat, url("/construction-worker-min.png") left 450px no-repeat, url("/fire-min.png") center 450px no-repeat;
         background-size: 140px auto;

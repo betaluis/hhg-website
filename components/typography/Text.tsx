@@ -13,17 +13,10 @@ export const Text = ({ children, color = "light", classes, bold }: TextProps) =>
     )
 }
 
-export const AccentText = ({ children, color = "light", classes, bold }: TextProps) => {
-    return (
-        <p className={`text-center sm:text-base lg:text-lg ${color === "light" ? "text-slate-100" : "text-slate-900"} ${classes} ${bold ? "font-bold" : ""}`}>
-            {children}
-        </p>
-    )
-}
-
 interface HeadingProps extends TextProps{
     size: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
+
 // TODO: Create the rest
 export const Heading = ({ children, size,  color = "light", classes }: HeadingProps) => {
     switch (size) {
