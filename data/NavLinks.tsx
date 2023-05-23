@@ -1,6 +1,5 @@
 import { ScissorLift, FireTruck, Ambulance, Construction, OilGas, Military } from "@/components/icons/IndustryIcons";
 import { BatteryIcon, BeltDrivenIcon, GeneratorIcon } from "@/components/icons/ProductIcons";
-import { abort } from "process";
 
 export const industriesNavItems: NavItem[] = [
     { 

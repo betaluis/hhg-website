@@ -1,13 +1,13 @@
 interface TextProps {
     children: React.ReactNode;
-    color?: "light" | "dark";
+    color?: "light" | "dark" | "none";
     classes?: string;
     bold?: boolean;
 }
 
 export const Text = ({ children, color = "light", classes, bold }: TextProps) => {
     return (
-        <p className={`text-center sm:text-left text-sm sm:text-base lg:text-lg ${color === "light" ? "text-slate-100" : "text-slate-900"} ${classes} ${bold ? "font-bold" : ""}`}>
+        <p className={`text-center sm:text-left text-sm sm:text-base lg:text-lg ${color === "light" ? "text-content-light" : color === "dark" ? "text-content-dark" : "" } ${classes} ${bold ? "font-bold" : ""}`}>
             {children}
         </p>
     )
@@ -22,13 +22,13 @@ export const Heading = ({ children, size,  color = "light", classes }: HeadingPr
     switch (size) {
         case "h1":
             return ( 
-                <h1 className={`text-center sm:text-left text-3xl sm:text-4xl lg:text-5xl font-black ${color === "light" ? "text-slate-100" : "text-slate-900"} ${classes}`}>
+                <h1 className={`text-center sm:text-left text-3xl sm:text-4xl lg:text-5xl font-black ${color === "light" ? "text-content-light" : color === "dark" ? "text-content-dark" : ""} ${classes}`}>
                     {children}
                 </h1>
             );
         case "h2":
             return (
-                <h2 className={`text-center sm:text-left text-xl sm:text-2xl lg:text-3xl font-bold ${color === "light" ? "text-slate-100" : "text-slate-900"} ${classes}`}>
+                <h2 className={`text-center sm:text-left text-xl sm:text-2xl lg:text-3xl font-bold ${color === "light" ? "text-content-light" : "text-content-dark"} ${classes}`}>
                     {children}
                 </h2>
             );

@@ -19,10 +19,10 @@ interface NavListProps {
 
 const SubList = ({ items }: { items: NavItem[] }) => {
     return (
-        <ul className="rounded-lg triangle absolute -left-12 top-14 bg-slate-100 min-w-[280px] p-4 opacity-0 pointer-events-none before:block before:h-4 before:w-full before:absolute before:-top-4 before:left-0 group-hover:pointer-events-auto group-hover:opacity-100 duration-150 transition-opacity">
+        <ul className="rounded-lg triangle absolute -left-12 top-14 bg-bkg-light min-w-[280px] p-4 opacity-0 pointer-events-none before:block before:h-4 before:w-full before:absolute before:-top-4 before:left-0 group-hover:pointer-events-auto group-hover:opacity-100 duration-150 transition-opacity">
             {items && items.map(({ href, label, icon }, index) => (
                 <Link key={index} href={href}>
-                    <li className="text-sm flex items-center space-x-3 py-3 px-3 rounded-lg hover:bg-gray-200">
+                    <li className="text-sm flex items-center space-x-3 py-3 px-3 rounded-lg hover:bg-hover-gray">
                         <div>
                             {icon?.sm}
                         </div>
@@ -37,7 +37,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
 }
 
 const NavItem = ({ href, label, sublist }: NavItem) => (
-    <div className="relative group hover:bg-gray-200">
+    <div className="relative group hover:bg-hover-gray">
         <Link href={href}>
             <li className="py-2 px-3">
                 {label}
@@ -67,7 +67,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element => (
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
     return (
-        <nav className="bg-slate-100 relative z-10">
+        <nav className="bg-bkg-light relative z-10">
 
             {/* desktop navigation */}
             <Container>
