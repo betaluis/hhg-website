@@ -11,7 +11,10 @@ module.exports = {
                 primary: "hsl(var(--primary) / <alpha-value>)",
                 content: {
                     light: "hsl(var(--content-light) / <alpha-value>)",
-                    dark: "hsl(var(--content-dark) / <alpha-value>)",
+                    dark: {
+                        1: "hsl(var(--content-dark) / <alpha-value>)",
+                        2: "hsl(var(--content-dark-2) / <alpha-value>)",
+                    }
                 },
                 bkg: {
                     green: "hsl(var(--bkg-green) / <alpha-value>)",

@@ -5,10 +5,12 @@ interface Product {
         src: string;
         alt: string;
         scale?: "small" | "smaller" | "large" | "larger";
+        width: number;
+        height: number;
     };
 }
 
-const Products = [
+const Products: Product[] = [
     {
         href: "/products/hydraulic-generator",
         label: "Hydraulic Generator",

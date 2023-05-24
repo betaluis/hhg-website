@@ -26,7 +26,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
                         <div>
                             {icon?.sm}
                         </div>
-                        <div>
+                        <div className="text-content-dark">
                             {label}
                         </div>
                     </li>
@@ -39,7 +39,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
 const NavItem = ({ href, label, sublist }: NavItem) => (
     <div className="relative group hover:bg-hover-gray">
         <Link href={href}>
-            <li className="py-2 px-3">
+            <li className="text-content-dark py-2 px-3">
                 {label}
             </li>
         </Link>

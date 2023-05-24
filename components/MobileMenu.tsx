@@ -34,7 +34,7 @@ const MobileLinks = ({ links, iconLayout }: LinksProps) => {
                 {productsNavItems.map((item, index) => (
                     <Link href={item.href} key={index} className="grid place-items-center mb-8">
                         <div className="pb-4">{item.icon?.lg}</div>
-                        <div className="text-center font-bold text-sm">{item.label}</div>
+                        <div className="text-center font-bold text-sm text-content-dark-2">{item.label}</div>
                     </Link>
                 ))}
             </Grid>
@@ -49,7 +49,7 @@ const MobileLinks = ({ links, iconLayout }: LinksProps) => {
                                 {link.icon?.sm}
                             </div>
                             <li className="list-none">
-                                <span className="font-bold text-sm">{link.label}</span>
+                                <span className="font-bold text-sm text-content-dark-2">{link.label}</span>
                             </li>
                         </Link>
                     </div>
@@ -62,7 +62,7 @@ const MobileLinks = ({ links, iconLayout }: LinksProps) => {
                 {links.map((link, index) => (
                     <div key={index} className="flex items-center justify-start text-sm">
                         <Link  href={link.href}>
-                            <li className="list-none">
+                            <li className="list-none text-content-dark-2">
                                 {link.label}
                             </li>
                         </Link>

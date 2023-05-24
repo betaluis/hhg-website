@@ -19,7 +19,7 @@ export default function Home() {
                             </Heading>
                         </div>
                         <div className="py-4 max-w-lg m-auto sm:m-0">
-                            <Text color="light" classes="text-hero-heading">
+                            <Text color="light" classes="text-content-light">
                                 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
                             </Text>
                         </div>
@@ -29,7 +29,7 @@ export default function Home() {
                                 href="/products" 
                                 bold={true}
                                 textColor="light"
-                                className="bg-dark-gradient hover:bg-dark-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(30,40,20,1)]"
+                                className="bg-dark-gradient hover:bg-dark-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(24_24_27,1)]"
                                 largeMobile={true}
                             />
                             <Button 
