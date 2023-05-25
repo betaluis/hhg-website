@@ -10,7 +10,10 @@ module.exports = {
             colors: {
                 primary: "hsl(var(--primary) / <alpha-value>)",
                 content: {
-                    light: "hsl(var(--content-light) / <alpha-value>)",
+                    light: {
+                        1: "hsl(var(--content-light) / <alpha-value>)",
+                        2: "hsl(var(--content-light-2) / <alpha-value>)",
+                    },
                     dark: {
                         1: "hsl(var(--content-dark) / <alpha-value>)",
                         2: "hsl(var(--content-dark-2) / <alpha-value>)",
@@ -29,6 +32,9 @@ module.exports = {
                 },
                 hover: {
                     gray: "hsl(var(--hover-gray) / <alpha-value>)",
+                },
+                outlines: {
+                    "slate-to-gray": "hsl(var(--outline-slate-to-gray) / <alpha-value>)",
                 },
             },
             backgroundImage: {

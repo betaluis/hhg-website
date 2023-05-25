@@ -26,7 +26,7 @@ const Button = ({
 
     const textClass = `
         text-center sm:text-xl
-        ${textColor === "light" ? "text-content-light" : "text-content-dark"} 
+        text-gray-200
         ${bold ? "font-bold" : ""}
         ${largeMobile ? "text-lg" : "text-sm"}
         `

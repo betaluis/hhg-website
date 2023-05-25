@@ -26,7 +26,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
                         <div>
                             {icon?.sm}
                         </div>
-                        <div className="text-content-dark">
+                        <div className="text-content-dark-1">
                             {label}
                         </div>
                     </li>
@@ -39,7 +39,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
 const NavItem = ({ href, label, sublist }: NavItem) => (
     <div className="relative group hover:bg-hover-gray">
         <Link href={href}>
-            <li className="text-content-dark py-2 px-3">
+            <li className="text-content-dark-1 py-2 px-3">
                 {label}
             </li>
         </Link>
@@ -67,7 +67,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element => (
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
     return (
-        <nav className="bg-bkg-light relative z-10">
+        <nav className="bg-bkg-light relative z-10 border-b border-outlines-slate-to-gray">
 
             {/* desktop navigation */}
             <Container>
@@ -81,21 +81,30 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
             </Container>
 
             {/* mobile navigation */}
-            <Container fixed={true}>
-                <div className="flex items-center justify-center py-2 lg:hidden">
-                    <MobileMenu />
-                    <Image
-                        src="/logo.png"
-                        alt="Harrison Hydra-Gen logo"
-                        width={80}
-                        height={30}
-                        className="mr-auto ml-auto w-auto h-auto"
-                    />
-                    <Link href="/contact">
-                        <ContactIcon />
-                    </Link>
-                </div>
-            </Container>
+            <div className="lg:hidden">
+               <Container fixed={true} outline={true}>
+                    <div className="flex items-center justify-center py-2 lg:hidden">
+                        <MobileMenu />
+                        <Image
+                            src="/white-logo.png"
+                            alt="Harrison Hydra-Gen logo"
+                            width={80}
+                            height={30}
+                            className="hidden dark:block mr-auto ml-auto w-auto h-auto"
+                        />
+                        <Image
+                            src="/logo.png"
+                            alt="Harrison Hydra-Gen logo"
+                            width={80}
+                            height={30}
+                            className="dark:hidden mr-auto ml-auto w-auto h-auto"
+                        />
+                        <Link href="/contact">
+                            <ContactIcon />
+                        </Link>
+                    </div>
+                </Container>
+            </div>
         </nav>
     )
 }
