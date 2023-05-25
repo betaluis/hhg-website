@@ -43,6 +43,8 @@ module.exports = {
                 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
                 "dark-gradient": "linear-gradient(to top, hsl(var(--dark-gradient-from)) 0%, hsl(var(--dark-gradient-to)) 100%)",
                 "dark-gradient-hover": "linear-gradient(to top, hsl(var(--dark-gradient-from-hover)) 0%, hsl(var(--dark-gradient-to-hover)) 100%)",
+                "green-gradient": "linear-gradient(to top, hsl(var(--green-gradient-from)) 0%, hsl(var(--green-gradient-to)) 100%)",
+                "green-gradient-hover": "linear-gradient(to top, hsl(var(--green-gradient-from-hover)) 0%, hsl(var(--green-gradient-to-hover)) 100%)",
             },
             gridTemplateColumns: {
                 'auto-fit': 'repeat(auto-fit, minmax(0, 2fr))',

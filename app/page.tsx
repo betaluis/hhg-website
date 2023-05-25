@@ -4,49 +4,52 @@ import Container from "@/components/Container";
 import Products from "@/data/Products";
 import { Heading, Text } from "@/components/typography/Text";
 import Button from "@/components/Button";
+import BlurEffect from "@/components/BlurEffect";
 
 export default function Home() {
 
     return (
         <>
             {/* Hero section */}
-            <section className="bg-bkg-green relative">
-                <Container classes="bg_people">
-                    <div className="pt-24 pb-52 sm:pb-24">
-                        <div className="pt-8 sm:pt-4 lg:pt-0">
-                            <Heading size="h1" color="none" classes="text-hero-heading">
-                                We are mobile power.
-                            </Heading>
+            <section className="bg-bkg-green relative"> 
+                <BlurEffect>
+                    <Container classes="bg_people relative">
+                        <div className="pt-24 pb-52 sm:pb-24">
+                            <div className="pt-8 sm:pt-4 lg:pt-0">
+                                <Heading size="h1" color="none" classes="text-hero-heading">
+                                    We are mobile power.
+                                </Heading>
+                            </div>
+                            <div className="py-4 max-w-lg m-auto sm:m-0">
+                                <Text color="light" classes="text-content-light-2">
+                                    Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                                </Text>
+                            </div>
+                            <div className="mt-2 flex flex-col sm:flex-row gap-4">
+                                <Button 
+                                    label="Products" 
+                                    href="/products" 
+                                    bold={true}
+                                    textColor="light"
+                                    className="bg-dark-gradient hover:bg-dark-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(24_24_27,1)]"
+                                    largeMobile={true}
+                                />
+                                <Button 
+                                    label="Get in touch" 
+                                    href="/" 
+                                    bold={true}
+                                    textColor="light"
+                                    className="bg-green-gradient hover:bg-green-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(22,101,52,1)]"
+                                    largeMobile={true}
+                                />
+                            </div>
                         </div>
-                        <div className="py-4 max-w-lg m-auto sm:m-0">
-                            <Text color="light" classes="text-content-light-2">
-                                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                            </Text>
-                        </div>
-                        <div className="mt-2 flex flex-col sm:flex-row gap-4">
-                            <Button 
-                                label="Products" 
-                                href="/products" 
-                                bold={true}
-                                textColor="light"
-                                className="bg-dark-gradient hover:bg-dark-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(24_24_27,1)]"
-                                largeMobile={true}
-                            />
-                            <Button 
-                                label="Get in touch" 
-                                href="/" 
-                                bold={true}
-                                textColor="light"
-                                className="bg-green-400 px-8 bg-gradient-to-t from-green-500 drop-shadow-[0_2px_0_rgba(22,101,52,1)] hover:from-green-400" 
-                                largeMobile={true}
-                            />
-                        </div>
-                    </div>
-                </ Container>
+                    </ Container>
+                </ BlurEffect>
             </section>       
 
             {/* Products section */}
-            <section className="bg-bkg-light py-4 sm:py-6 border-t border-b border-outlines-slate-to-gray">
+            <section className="bg-bkg-light py-4 sm:py-6">
                 <Container>
                     <div className="grid grid-cols-2 gap-2 gap-y-4 sm:grid-cols-4">
                         {Products.map((product, index) => (

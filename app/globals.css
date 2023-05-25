@@ -24,8 +24,12 @@
         /* Gradient */
         --dark-gradient-to: 215deg 19% 35%;
         --dark-gradient-from: 217deg 33% 17%;
-        --dark-gradient-to-hover: 215deg 25% 27%;
-        --dark-gradient-from-hover: 215deg 25% 27%;
+        --dark-gradient-to-hover: 215deg 19% 35%;
+        --dark-gradient-from-hover: 215deg 25% 23%;
+        --green-gradient-from: 141.89999999999998deg 69.2% 37%;
+        --green-gradient-to: 141.7deg 76.6% 59%;
+        --green-gradient-from-hover: 141.89999999999998deg 69.2% 40%;
+        --green-gradient-to-hover: 141.7deg 76.6% 59%;
 
         /* Outline */
         --outline-slate-to-gray: 210deg 40% 96.1%;
@@ -135,3 +139,52 @@ body {
         -o-background-size: 140px auto;
     }
 }
+
+.gradient-blur:hover::before,
+.effect-border {
+    opacity: 1;
+}
+
+.gradient-blur {
+    background-color: hsla(240deg 5.9% 80% / 0.2);
+    position: relative;
+    z-index: 0;
+    padding: 2px 0;
+}
+.gradient-blur::before,
+.effect-border {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+
+.gradient-blur::before {
+    background: radial-gradient(1400px circle at var(--mouse-x) var(--mouse-y), rgba(74, 222, 128, 0.15), transparent 40%);
+    z-index: -1;
+}
+.effect-border {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(74, 222, 128, 1), transparent 40%);
+    z-index: -3;
+}
+
+.effect-content {
+    background-color: hsla(240deg 5.9% 10% / 1);
+    height: calc(100% - 2px);
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+/*
+.effect-content > button {
+    position: relative;
+    margin-left: 155px;
+    z-index: 2;
+}
+*/

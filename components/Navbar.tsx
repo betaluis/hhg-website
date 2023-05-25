@@ -40,7 +40,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
 const NavItem = ({ href, label, sublist }: NavItem) => (
     <div className="relative group hover:bg-hover-gray">
         <Link href={href}>
-            <li className="flex items-center gap-1 text-content-dark-1 py-2 px-3 group">
+            <li className="flex items-center gap-[1px] text-content-dark-1 py-2 px-3 group">
                 {label}
                 {sublist ? <ChevDown /> : null}
             </li>
@@ -69,7 +69,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element => (
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
     return (
-        <nav className="bg-bkg-light relative z-10 border-b border-outlines-slate-to-gray">
+        <nav className="bg-bkg-light relative z-10">
 
             {/* desktop navigation */}
             <Container>
