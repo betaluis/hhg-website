@@ -4,6 +4,7 @@ import Image from "next/image";
 import Container from "@/components/Container";
 import MobileMenu from "@/components/MobileMenu";
 import ContactIcon from "@/components/icons/ContactIcon";
+import { ChevDown } from "@/components/icons/Generic";
 
 interface Props {
     leftNavItems: NavItem[];
@@ -39,8 +40,9 @@ const SubList = ({ items }: { items: NavItem[] }) => {
 const NavItem = ({ href, label, sublist }: NavItem) => (
     <div className="relative group hover:bg-hover-gray">
         <Link href={href}>
-            <li className="text-content-dark-1 py-2 px-3">
+            <li className="flex items-center gap-1 text-content-dark-1 py-2 px-3 group">
                 {label}
+                {sublist ? <ChevDown /> : null}
             </li>
         </Link>
         {sublist && <SubList items={sublist} />}
