@@ -119,16 +119,16 @@ body {
 }
 @media screen and (max-width: 639px) {
     .bg_people {
-        background: url('/military-min.png') right 400px no-repeat, url("/construction-worker-min.png") left 390px no-repeat, url("/fire-min.png") 50% 390px no-repeat;
+        background: url('/military-min.png') right 460px no-repeat, url("/construction-worker-min.png") left 460px no-repeat, url("/fire-min.png") 50% 460px no-repeat;
         background-size: 140px auto;
         -webkit-background-size: 140px auto;
         -moz-background-size: 140px auto;
         -o-background-size: 140px auto;
     }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 404px) {
     .bg_people {
-        background: url('/military-min.png') right 450px no-repeat, url("/construction-worker-min.png") left 450px no-repeat, url("/fire-min.png") center 450px no-repeat;
+        background: url('/military-min.png') right 520px no-repeat, url("/construction-worker-min.png") left 530px no-repeat, url("/fire-min.png") center 530px no-repeat;
         background-size: 140px auto;
         -webkit-background-size: 140px auto;
         -moz-background-size: 140px auto;
