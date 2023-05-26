@@ -13,7 +13,7 @@ export default function Home() {
             {/* Hero section */}
             <section className="bg-bkg-green relative"> 
                 <BlurEffect>
-                    <Container classes="bg_people relative">
+                    <Container classes="bg_people">
                         <div className="pt-24 pb-52 sm:pb-24">
                             <div className="pt-8 sm:pt-4 lg:pt-0">
                                 <Heading size="h1" color="none" classes="text-hero-heading">

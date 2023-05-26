@@ -69,7 +69,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element => (
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
     return (
-        <nav className="bg-bkg-light relative z-10">
+        <nav className="bg-bkg-light relative z-20">
 
             {/* desktop navigation */}
             <Container>

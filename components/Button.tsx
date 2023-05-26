@@ -21,6 +21,7 @@ const Button = ({
     const buttonClass = `
         block text-center py-4
         text-white rounded cursor-pointer 
+        hover:transform fancy-rotate trasition-all duration-300
         ${className} 
         `
 
