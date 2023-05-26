@@ -15,4 +15,14 @@ type ImageType = {
     src: string;
     alt: string;
 }
-
+type Product = {
+    href: string;
+    label: string;
+    image: {
+        src: string;
+        alt: string;
+        scale?: "small" | "smaller" | "large" | "larger";
+        width: number;
+        height: number;
+    };
+}

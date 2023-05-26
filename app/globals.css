@@ -140,7 +140,7 @@ body {
     }
 }
 
-/* Gradient Blur Hover Effect */
+/* Gradient Blur Hover Effect (section type) */
 .gradient-blur {
     background-color: var(--bkg-green);
     width: 100%;
@@ -163,19 +163,9 @@ body {
     transition: opacity 0.4s ease-out 0.1s;
 }
 .gradient-blur::before {
-    background: radial-gradient(
-        1000px circle at var(--mouse-x) var(--mouse-y), 
-        rgba(74, 222, 128, 0.2),
-        transparent 40%
-    );
     z-index: 3;
 }
 .gradient-blur::after {
-    background: radial-gradient(
-        400px circle at var(--mouse-x) var(--mouse-y), 
-        rgba(74, 222, 128, 0.6),
-        transparent 40%
-    );
     z-index: 1;
 }
 .gradient-content {
@@ -184,7 +174,106 @@ body {
     left: 0;
     width: 100%;
     height: calc(100% - 3px);
-    background: rgba(25,25,25,1);
+    background: hsl(var(--bkg-green));
     margin: 1.5px 0;
     z-index: 2;
+}
+
+/* Gradient Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .gradient-blur::before {
+        background: radial-gradient(
+            1000px circle at var(--mouse-x) var(--mouse-y), 
+            rgba(74, 222, 128, 0.2),
+            transparent 40%
+        );
+        z-index: 3;
+    }
+    .gradient-blur::after {
+        background: radial-gradient(
+            400px circle at var(--mouse-x) var(--mouse-y), 
+            rgba(74, 222, 128, 0.6),
+            transparent 40%
+        );
+        z-index: 1;
+    }
+}
+
+/* Gradient Blur Hover Effect (card type) */
+
+.blur-group:hover .card-blur::before,
+.blur-group:hover .card-blur::after{
+    opacity: 1;
+}
+
+.card-blur {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    outline: 1px solid rgb(226, 232, 240);
+    transition: all 0.2s ease-in-out;
+}
+.card-blur:hover > .card-content {
+    outline: 1px solid rgb(34, 197, 94);
+}
+
+/*.card-blur:hover::before,
+.card-blur:hover::after{
+    opacity: 1;
+}*/
+.card-blur::before,
+.card-blur::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-out 0.1s;
+    border-radius: 8px;
+}
+.card-blur::before {
+    z-index: 3;
+}
+.card-blur::after {
+    z-index: 1;
+}
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background: hsl(var(--bkg-light));
+    margin: 1px;
+    padding: 1rem;
+    z-index: 2;
+    border-radius: 8px;
+}
+
+/* Gradient Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .card-blur {
+        box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.2);
+    }
+    .card-blur::before {
+        background: radial-gradient(
+            600px circle at var(--x-mouse) var(--y-mouse), 
+            rgba(74, 222, 128, 0.2),
+            transparent 40%
+        );
+        z-index: 3;
+    }
+    .card-blur::after {
+        background: radial-gradient(
+            400px circle at var(--x-mouse) var(--y-mouse), 
+            rgba(74, 222, 128, 0.6),
+            transparent 40%
+        );
+        z-index: 1;
+    }
 }
