@@ -274,7 +274,7 @@ body {
     }
     .card-blur::after {
         background: radial-gradient(
-            300px circle at var(--x-mouse) var(--y-mouse), 
+            500px circle at var(--x-mouse) var(--y-mouse), 
             rgba(74, 222, 128, 0.6),
             transparent 40%
         );
