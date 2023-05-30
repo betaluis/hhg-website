@@ -51,7 +51,7 @@ export default function Home() {
 
             {/* Hero section with button */}
             <section className="bg-bkg-green relative">
-                <div className="bg_vehicles"></div>
+                <div className="bg_MEWP"></div>
                 <BlurEffect>
                     <Container>
                         <div className="flex items-center gap-8">

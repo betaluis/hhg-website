@@ -242,7 +242,7 @@ body {
     -moz-background-size: 550px auto;
     -o-background-size: 550px auto;
 }
-.bg_vehicles {
+.bg_MEWP {
     height: 300px;
     width: 1000px;
     background-image: url('/vehicles/MEWP-blue.png');
@@ -256,6 +256,8 @@ body {
     top: 160px;
     right: 0;
     z-index: 4;
+}
+.bg_ {
 }
 @media screen and (max-width: 777px) {
     .bg_people {
@@ -300,7 +302,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.4s ease-out 0.1s;
 }
 .gradient-blur::before {
@@ -376,11 +378,6 @@ body {
 .card-blur:hover > .card-content {
     outline: 1px solid rgb(34, 197, 94);
 }
-
-/*.card-blur:hover::before,
-.card-blur:hover::after{
-opacity: 1;
-}*/
 .card-blur::before,
 .card-blur::after {
     content: '';
@@ -412,7 +409,7 @@ opacity: 1;
     border-radius: 8px;
 }
 
-/* Gradient Dark Mode */
+/* Gradient Dark Mode for Cards */
 @media (prefers-color-scheme: dark) {
     .card-blur {
         box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.2);
@@ -462,6 +459,7 @@ opacity: 1;
     z-index: 1;
 }
 
+/* Power button */
 .power-button {
     box-shadow:
         2.8px 2.8px 2.2px rgba(0, 0, 0, 0.03),
