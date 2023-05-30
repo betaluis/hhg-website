@@ -15,7 +15,7 @@ interface Props {
 export default function RootLayout({ children }: Props) {
 
     return (
-        <html lang="en" data-theme="">
+        <html lang="en" data-theme="light">
             <body className="bg-slate-100">
                 <Navbar
                     leftNavItems={leftNavItems}

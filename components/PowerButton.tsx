@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-
 const PowerButton = () => {
 
     const handleClick = () => {
@@ -9,6 +7,8 @@ const PowerButton = () => {
         const theme = root.getAttribute("data-theme");
         if (theme === "dark") {
             root.setAttribute("data-theme", "light");
+        } else if (theme === "light") {
+            root.setAttribute("data-theme", "dark");
         } else {
             root.setAttribute("data-theme", "dark");
         }
