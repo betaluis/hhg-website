@@ -62,6 +62,38 @@
             /* Outline */
             --outline-slate-to-gray: 240deg 10% 30%;
         }
+        :root[data-theme="light"] {
+            --primary: 142deg 76% 36%;
+            --main: 210deg 40% 96%;
+
+            --content-light: 210deg 40% 96%;
+            --content-light-2: 210deg 40% 96%;
+            --content-dark: 240deg 4% 30%;
+            --content-dark-2: 240deg 0% 0%;
+            --hero-heading: 210deg 40% 96%;
+
+            --bkg-green: 142deg 76% 36%;
+            --bkg-light: 210deg 40% 96%;
+            --bkg-white: 0deg 0% 100%;
+            --accent-green: 142deg 76% 36%;
+            --hover-gray: 220deg 13% 91%;
+
+            --button-bg: 215deg 27.9% 16.9%;
+            --neon: 141.7deg 76.6% 73.1%;
+
+            /* Gradient */
+            --dark-gradient-to: 215deg 19% 35%;
+            --dark-gradient-from: 217deg 33% 17%;
+            --dark-gradient-to-hover: 215deg 19% 35%;
+            --dark-gradient-from-hover: 215deg 25% 23%;
+            --green-gradient-from: 141.89999999999998deg 69.2% 37%;
+            --green-gradient-to: 141.7deg 76.6% 59%;
+            --green-gradient-from-hover: 141.89999999999998deg 69.2% 40%;
+            --green-gradient-to-hover: 141.7deg 76.6% 59%;
+
+            /* Outline */
+            --outline-slate-to-gray: 210deg 40% 96.1%;
+        }
     }
 
     :root[data-theme="dark"] {

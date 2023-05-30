@@ -14,13 +14,8 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
 
-    const rgb = () => `
-        rgb(${Math.floor(Math.random() * 255)},
-            ${Math.floor(Math.random() * 255)},
-            ${Math.floor(Math.random() * 255)})`
-
     return (
-        <html lang="en" data-theme="light">
+        <html lang="en" data-theme="">
             <body className="bg-slate-100">
                 <Navbar
                     leftNavItems={leftNavItems}
