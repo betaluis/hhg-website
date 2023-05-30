@@ -17,13 +17,6 @@ const ProductGlowCards = ({ products }: Props) => {
                 x = e.clientX - rect.left,
                 y = e.clientY - rect.top;
 
-            console.log({
-                x,
-                y,
-                rect,
-                card,
-            });
-
             card.style.setProperty("--x-mouse", `${x}px`);
             card.style.setProperty("--y-mouse", `${y}px`);
         });

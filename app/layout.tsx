@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Props) {
             ${Math.floor(Math.random() * 255)})`
 
     return (
-        <html lang="en">
+        <html lang="en" data-theme="light">
             <body className="bg-slate-100">
                 <Navbar
                     leftNavItems={leftNavItems}

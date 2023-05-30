@@ -21,6 +21,9 @@
         --accent-green: 142deg 76% 36%;
         --hover-gray: 220deg 13% 91%;
 
+        --button-bg: 215deg 27.9% 16.9%;
+        --neon: 141.7deg 76.6% 73.1%;
+
         /* Gradient */
         --dark-gradient-to: 215deg 19% 35%;
         --dark-gradient-from: 217deg 33% 17%;
@@ -34,30 +37,58 @@
         /* Outline */
         --outline-slate-to-gray: 210deg 40% 96.1%;
     }
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bkg-green: 240deg 5.9% 10%;
-        --bkg-white: 240deg 5.9% 10%;
-        --bkg-light: 240deg 3.7% 15.9%;
-        --hover-gray: 240deg 3.9% 14%;
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bkg-green: 240deg 5.9% 10%;
+            --bkg-white: 240deg 5.9% 10%;
+            --bkg-light: 240deg 3.7% 15.9%;
+            --hover-gray: 240deg 3.9% 14%;
 
-        --content-light: 220deg 13% 87%;
-        --content-light-2: 240deg 5.2% 60%;
-        --content-dark: 220deg 13% 87%;
-        --content-dark-2: 220deg 13% 87%;
-        --hero-heading: 220deg 13% 87%;
+            --button-bg: 240deg 5.3% 26.1%;
+            --neon: 142.10000000000002deg 70.6% 45.3%;
 
-        --dark-gradient-to: 240deg 6% 30%;
-        --dark-gradient-from: 240deg 3.7% 15.9%;
-        --dark-gradient-to-hover: 240deg 6% 33%;
-        --dark-gradient-from-hover: 240deg 6% 20%;
+            --content-light: 220deg 13% 87%;
+            --content-light-2: 240deg 5.2% 60%;
+            --content-dark: 220deg 13% 87%;
+            --content-dark-2: 220deg 13% 87%;
+            --hero-heading: 220deg 13% 87%;
 
-        /* Outline */
-        --outline-slate-to-gray: 240deg 10% 30%;
+            --dark-gradient-to: 240deg 6% 30%;
+            --dark-gradient-from: 240deg 3.7% 15.9%;
+            --dark-gradient-to-hover: 240deg 6% 33%;
+            --dark-gradient-from-hover: 240deg 6% 20%;
+
+            /* Outline */
+            --outline-slate-to-gray: 240deg 10% 30%;
+        }
+    }
+
+    :root[data-theme="dark"] {
+            --bkg-green: 240deg 5.9% 10%;
+            --bkg-white: 240deg 5.9% 10%;
+            --bkg-light: 240deg 3.7% 15.9%;
+            --hover-gray: 240deg 3.9% 14%;
+
+            --button-bg: 240deg 5.3% 26.1%;
+            --neon: 142.10000000000002deg 70.6% 45.3%;
+
+            --content-light: 220deg 13% 87%;
+            --content-light-2: 240deg 5.2% 60%;
+            --content-dark: 220deg 13% 87%;
+            --content-dark-2: 220deg 13% 87%;
+            --hero-heading: 220deg 13% 87%;
+
+            --dark-gradient-to: 240deg 6% 30%;
+            --dark-gradient-from: 240deg 3.7% 15.9%;
+            --dark-gradient-to-hover: 240deg 6% 33%;
+            --dark-gradient-from-hover: 240deg 6% 20%;
+
+            /* Outline */
+            --outline-slate-to-gray: 240deg 10% 30%;
     }
 }
+
 
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -115,6 +146,21 @@ body {
     -webkit-background-size: 550px auto;
     -moz-background-size: 550px auto;
     -o-background-size: 550px auto;
+}
+.bg_vehicles {
+    height: 300px;
+    width: 1000px;
+    background-image: url('/vehicles/MEWP-blue.png');
+    background-repeat: no-repeat;
+    background-position: 480px 40px;
+    background-size: 550px auto;
+    -webkit-background-size: 550px auto;
+    -moz-background-size: 550px auto;
+    -o-background-size: 550px auto;
+    position: absolute;
+    top: 160px;
+    right: 0;
+    z-index: 4;
 }
 @media screen and (max-width: 777px) {
     .bg_people {
@@ -186,7 +232,7 @@ body {
             1000px circle at var(--mouse-x) var(--mouse-y), 
             rgba(74, 222, 128, 0.2),
             transparent 40%
-        );
+            );
         z-index: 3;
     }
     .gradient-blur::after {
@@ -194,9 +240,25 @@ body {
             400px circle at var(--mouse-x) var(--mouse-y), 
             rgba(74, 222, 128, 0.6),
             transparent 40%
-        );
+            );
         z-index: 1;
     }
+}
+:root[data-theme="dark"] .gradient-blur::before {
+    background: radial-gradient(
+        1000px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(74, 222, 128, 0.2),
+        transparent 40%
+        );
+    z-index: 3;
+}
+:root[data-theme="dark"] .gradient-blur::after {
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(74, 222, 128, 0.6),
+        transparent 40%
+        );
+    z-index: 1;
 }
 
 /* Gradient Blur Hover Effect (card type) */
@@ -222,7 +284,7 @@ body {
 
 /*.card-blur:hover::before,
 .card-blur:hover::after{
-    opacity: 1;
+opacity: 1;
 }*/
 .card-blur::before,
 .card-blur::after {
@@ -269,7 +331,7 @@ body {
             800px circle at var(--x-mouse) var(--y-mouse), 
             rgba(74, 222, 128, 0.2),
             transparent 40%
-        );
+            );
         z-index: 3;
     }
     .card-blur::after {
@@ -277,7 +339,105 @@ body {
             500px circle at var(--x-mouse) var(--y-mouse), 
             rgba(74, 222, 128, 0.6),
             transparent 40%
-        );
+            );
         z-index: 1;
     }
+}
+:root[data-theme="dark"] .card-blur {
+    box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+:root[data-theme="dark"] .card-blur:hover > .card-content {
+    outline: none;
+}
+:root[data-theme="dark"] .card-blur::before {
+    background: radial-gradient(
+        800px circle at var(--x-mouse) var(--y-mouse), 
+        rgba(74, 222, 128, 0.2),
+        transparent 40%
+        );
+    z-index: 3;
+}
+:root[data-theme="dark"] .card-blur::after {
+    background: radial-gradient(
+        500px circle at var(--x-mouse) var(--y-mouse), 
+        rgba(74, 222, 128, 0.6),
+        transparent 40%
+        );
+    z-index: 1;
+}
+
+.power-button {
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.03),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.038),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.045),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.12),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.09),
+        100px 100px 80px rgba(0, 0, 0, 0.07),
+        inset -4px -4px 3px 2px rgba(0, 0, 0, 0.4),
+        inset 4px 4px 3px 2px rgba(255, 255, 255, 0.1);
+    background-color: hsl(var(--button-bg));
+    display: grid;
+    place-items: center;
+    transition: transform 0.5s ;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 4;
+}
+.power-button:hover {
+    transform: scale(1.05);
+}
+.power-button_inner {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: hsl(var(--neon));
+    position: relative;
+    transition: box-shadow 0.5s;
+}
+.power-button_inner::before {
+    content: "";
+    background-color: hsl(var(--button-bg));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+}
+.power-button_inner::after {
+    content: "";
+    background-color: hsl(var(--neon));
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 45%;
+    width: 10%;
+    border-radius: 10px;
+    box-shadow: 0 0 0px 8px hsl(var(--button-bg));
+    transition: box-shadow 0.5s;
+}
+:root[data-theme="dark"] .power-button_inner {
+    box-shadow: 0 0 10px hsl(var(--neon));
+}
+:root[data-theme="dark"] .power-button_inner::after {
+    box-shadow: 0 0 10px hsl(var(--neon)),
+        0 0 0px 8px hsl(var(--button-bg));
+}
+:root[data-theme="dark"] .white-logo {
+    display: block;
+}
+:root[data-theme="light"] .white-logo {
+    display: none;
+}
+:root[data-theme="light"] .dark-logo {
+    display: block;
+}
+:root[data-theme="dark"] .dark-logo {
+    display: none;
 }

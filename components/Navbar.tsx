@@ -92,14 +92,14 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
                             alt="Harrison Hydra-Gen logo"
                             width={80}
                             height={30}
-                            className="hidden dark:block mr-auto ml-auto w-auto h-auto"
+                            className="white-logo hidden dark:block mr-auto ml-auto w-auto h-auto"
                         />
                         <Image
                             src="/logo.png"
                             alt="Harrison Hydra-Gen logo"
                             width={80}
                             height={30}
-                            className="dark:hidden mr-auto ml-auto w-auto h-auto"
+                            className="dark-logo dark:hidden mr-auto ml-auto w-auto h-auto"
                         />
                         <Link href="/contact">
                             <ContactIcon />
