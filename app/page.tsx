@@ -4,58 +4,17 @@ import { Heading, Text } from "@/components/typography/Text";
 import Button from "@/components/Button";
 import BlurEffect from "@/components/BlurEffect";
 import ProductGlowCards from "@/components/ProductGlowCards";
-import PowerButton from "@/components/PowerButton";
 
 export default function Home() {
 
     return (
         <>
-            {/* Hero section */}
-            {/*<section className="bg-bkg-green relative">
-                <BlurEffect>
-                    <Container classes="bg_people">
-                        <div className="pt-24 pb-52 sm:pb-24">
-                            <div className="pt-8 sm:pt-4 lg:pt-0">
-                                <Heading size="h1" color="none" classes="text-hero-heading">
-                                    We are mobile power.
-                                </Heading>
-                            </div>
-                            <div className="py-4 max-w-lg m-auto sm:m-0">
-                                <Text color="light" classes="text-content-light-2">
-                                    Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                                </Text>
-                            </div>
-                            <div className="mt-2 flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    label="Products"
-                                    href="/products"
-                                    bold={true}
-                                    textColor="light"
-                                    className="bg-dark-gradient hover:bg-dark-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(24_24_27,1)]"
-                                    largeMobile={true}
-                                />
-                                <Button
-                                    label="Get in touch"
-                                    href="/"
-                                    bold={true}
-                                    textColor="light"
-                                    className="bg-green-gradient hover:bg-green-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(22,101,52,1)]"
-                                    largeMobile={true}
-                                />
-                            </div>
-                        </div>
-                    </ Container>
-                </ BlurEffect>
-            </section>
-            /*}
-
             {/* Hero section with button */}
             <section className="bg-bkg-green relative">
-                <div className="bg_MEWP"></div>
                 <BlurEffect>
-                    <Container>
-                        <div className="flex items-center gap-8">
-                            <div className="pt-24 pb-52 w-2/3 sm:pb-24">
+                    <Container classes="bg_people">
+                        <div className="flex">
+                            <div className="pt-24 pb-44 sm:py-32 lg:py-14">
                                 <div className="pt-8 sm:pt-4 lg:pt-0">
                                     <Heading size="h1" color="none" classes="text-hero-heading">
                                         We are mobile power.
@@ -63,7 +22,8 @@ export default function Home() {
                                 </div>
                                 <div className="py-4 max-w-lg m-auto sm:m-0">
                                     <Text color="light" classes="text-content-light-2">
-                                        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+                                        <span>Unlock the Power of Your Fleet with Harrison HydraGen.</span>
+                                        <span>Our cutting-edge solutions ensure uninterrupted operation, providing reliable power whether your vehicle is running or at rest.</span>
                                     </Text>
                                 </div>
                                 <div className="mt-2 flex flex-col sm:flex-row gap-4">
@@ -84,9 +44,6 @@ export default function Home() {
                                         largeMobile={true}
                                     />
                                 </div>
-                            </div>
-                            <div>
-                                <PowerButton />
                             </div>
                         </div>
                     </ Container>

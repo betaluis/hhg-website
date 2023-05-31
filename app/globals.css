@@ -23,8 +23,8 @@
             --accent-green: 142deg 76% 36%;
             --hover-gray: 220deg 13% 91%;
 
-            --button-bg: 215deg 27.9% 16.9%;
-            --neon: 141.7deg 76.6% 73.1%;
+            --bkg-power-button: 215deg 27.9% 16.9%;
+            --bkg-neon: 141.7deg 76.6% 73.1%;
 
             /* Gradient */
             --dark-gradient-to: 215deg 19% 35%;
@@ -55,8 +55,8 @@
             --accent-green: 142deg 76% 36%;
             --hover-gray: 220deg 13% 91%;
 
-            --button-bg: 215deg 27.9% 16.9%;
-            --neon: 141.7deg 76.6% 73.1%;
+            --bkg-power-button: 215deg 27.9% 16.9%;
+            --bkg-neon: 141.7deg 76.6% 73.1%;
 
             /* Gradient */
             --dark-gradient-to: 215deg 19% 35%;
@@ -77,8 +77,8 @@
             --bkg-light: 240deg 3.7% 15.9%;
             --hover-gray: 240deg 3.9% 14%;
 
-            --button-bg: 240deg 5.3% 26.1%;
-            --neon: 142.10000000000002deg 70.6% 45.3%;
+            --bkg-power-button: 240deg 5.3% 26.1%;
+            --bkg-neon: 142.10000000000002deg 70.6% 45.3%;
 
             --content-light: 220deg 13% 87%;
             --content-light-2: 240deg 5.2% 60%;
@@ -109,8 +109,8 @@
             --bkg-light: 240deg 3.7% 15.9%;
             --hover-gray: 240deg 3.9% 14%;
 
-            --button-bg: 240deg 5.3% 26.1%;
-            --neon: 142.10000000000002deg 70.6% 45.3%;
+            --bkg-power-button: 240deg 5.3% 26.1%;
+            --bkg-neon: 142.10000000000002deg 70.6% 45.3%;
 
             --content-light: 220deg 13% 87%;
             --content-light-2: 240deg 5.2% 60%;
@@ -146,8 +146,8 @@
             --accent-green: 142deg 76% 36%;
             --hover-gray: 220deg 13% 91%;
 
-            --button-bg: 215deg 27.9% 16.9%;
-            --neon: 141.7deg 76.6% 73.1%;
+            --bkg-power-button: 215deg 27.9% 16.9%;
+            --bkg-neon: 141.7deg 76.6% 73.1%;
 
             /* Gradient */
             --dark-gradient-to: 215deg 19% 35%;
@@ -168,8 +168,8 @@
                 --bkg-light: 240deg 3.7% 15.9%;
                 --hover-gray: 240deg 3.9% 14%;
 
-                --button-bg: 240deg 5.3% 26.1%;
-                --neon: 142.10000000000002deg 70.6% 45.3%;
+                --bkg-power-button: 240deg 5.3% 26.1%;
+                --bkg-neon: 142.10000000000002deg 70.6% 45.3%;
 
                 --content-light: 220deg 13% 87%;
                 --content-light-2: 240deg 5.2% 60%;
@@ -193,26 +193,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.h_screen {
-    height: calc(100vh - 40px);
-}
-
-.min_h_screen {
-    min-height: calc(100vh - 40px);
-}
-
-@media screen and (max-width: 1040px) {
-    .h_screen {
-        height: calc(100vh - 49px);
-    }
-
-    .min_h_screen {
-        min-height: calc(100vh - 49px);
-    }
-}
-
 /* Custom Utils */
-
 .flip-y {
     transform: rotateY(180deg);
 }
@@ -233,19 +214,20 @@ body {
     transition: opacity 0.2s ease-in-out;
 }
 
+/* Background Images */
 .bg_people {
     background-image: url('/people-min.png');
     background-repeat: no-repeat;
-    background-position: 480px 40px;
+    background-position: 480px 20px;
     background-size: 550px auto;
     -webkit-background-size: 550px auto;
     -moz-background-size: 550px auto;
     -o-background-size: 550px auto;
 }
-.bg_MEWP {
+.bg_ambulance {
     height: 300px;
     width: 1000px;
-    background-image: url('/vehicles/MEWP-blue.png');
+    background-image: url('/vehicles/ambulance.png');
     background-repeat: no-repeat;
     background-position: 480px 40px;
     background-size: 550px auto;
@@ -253,20 +235,45 @@ body {
     -moz-background-size: 550px auto;
     -o-background-size: 550px auto;
     position: absolute;
-    top: 160px;
-    right: 0;
+    top: 220px;
+    right: 140px;
     z-index: 4;
+    transform: scale(0.6);
 }
-.bg_ {
+.bg_firetruck  {
+    height: 300px;
+    width: 1000px;
+    background-image: url('/vehicles/firetruck.png');
+    background-repeat: no-repeat;
+    background-position: 480px 40px;
+    background-size: 550px auto;
+    -webkit-background-size: 550px auto;
+    -moz-background-size: 550px auto;
+    -o-background-size: 550px auto;
+    position: absolute;
+    top: 210px;
+    right: -80px;
+    z-index: 4; 
+    transform: scale(0.8);
 }
-@media screen and (max-width: 777px) {
+@media screen and (max-width: 1026px) {
     .bg_people {
-        background-position: 330px 80px;
+        background-position: 420px 100px;
+    }
+}
+@media screen and (max-width: 779px) {
+    .bg_people {
+        background-position: 400px 120px;
+    }
+}
+@media screen and (max-width: 690px) {
+    .bg_people {
+        background-position: 300px 120px;
     }
 }
 @media screen and (max-width: 639px) {
     .bg_people {
-        background: url('/military-min.png') right 460px no-repeat, url("/construction-worker-min.png") left 460px no-repeat, url("/fire-min.png") 50% 460px no-repeat;
+        background: url('/military-min.png') 25% 470px no-repeat, url("/construction-worker-min.png") 55% 470px no-repeat, url("/fire-min.png") 80% 470px no-repeat;
         background-size: 140px auto;
         -webkit-background-size: 140px auto;
         -moz-background-size: 140px auto;
@@ -275,7 +282,16 @@ body {
 }
 @media screen and (max-width: 404px) {
     .bg_people {
-        background: url('/military-min.png') right 520px no-repeat, url("/construction-worker-min.png") left 530px no-repeat, url("/fire-min.png") center 530px no-repeat;
+        background: url('/military-min.png') 25% 480px no-repeat, url("/construction-worker-min.png") 55% 480px no-repeat, url("/fire-min.png") 80% 480px no-repeat;
+        background-size: 140px auto;
+        -webkit-background-size: 140px auto;
+        -moz-background-size: 140px auto;
+        -o-background-size: 140px auto;
+    }
+}
+@media screen and (max-width: 371px) {
+    .bg_people {
+        background: url('/military-min.png') 15% 520px no-repeat, url("/construction-worker-min.png") 60% 520px no-repeat, url("/fire-min.png") 90% 520px no-repeat;
         background-size: 140px auto;
         -webkit-background-size: 140px auto;
         -moz-background-size: 140px auto;
@@ -359,7 +375,6 @@ body {
 }
 
 /* Gradient Blur Hover Effect (card type) */
-
 .blur-group:hover .card-blur::before,
 .blur-group:hover .card-blur::after{
     opacity: 1;
@@ -459,8 +474,8 @@ body {
     z-index: 1;
 }
 
-/* Power button */
-.power-button {
+/* Power button and logo in dark mode*/
+.power-button-shadow {
     box-shadow:
         2.8px 2.8px 2.2px rgba(0, 0, 0, 0.03),
         6.7px 6.7px 5.3px rgba(0, 0, 0, 0.038),
@@ -470,57 +485,19 @@ body {
         100px 100px 80px rgba(0, 0, 0, 0.07),
         inset -4px -4px 3px 2px rgba(0, 0, 0, 0.4),
         inset 4px 4px 3px 2px rgba(255, 255, 255, 0.1);
-    background-color: hsl(var(--button-bg));
-    display: grid;
-    place-items: center;
-    transition: transform 0.5s ;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    position: relative;
-    z-index: 4;
 }
 .power-button:hover {
     transform: scale(1.05);
 }
-.power-button_inner {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: hsl(var(--neon));
-    position: relative;
-    transition: box-shadow 0.5s;
-}
-.power-button_inner::before {
-    content: "";
-    background-color: hsl(var(--button-bg));
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 80%;
-    width: 80%;
-    border-radius: 50%;
-}
 .power-button_inner::after {
-    content: "";
-    background-color: hsl(var(--neon));
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 45%;
-    width: 10%;
-    border-radius: 10px;
-    box-shadow: 0 0 0px 8px hsl(var(--button-bg));
-    transition: box-shadow 0.5s;
+    box-shadow: 0 0 0px 10px hsl(var(--bkg-power-button));
 }
 :root[data-theme="dark"] .power-button_inner {
-    box-shadow: 0 0 10px hsl(var(--neon));
+    box-shadow: 0 0 12px hsl(var(--bkg-neon));
 }
 :root[data-theme="dark"] .power-button_inner::after {
-    box-shadow: 0 0 10px hsl(var(--neon)),
-        0 0 0px 8px hsl(var(--button-bg));
+    box-shadow: 0 0 12px 0px hsl(var(--bkg-neon)),
+        0 0 0px 10px hsl(var(--bkg-power-button));
 }
 :root[data-theme="dark"] .white-logo {
     display: block;

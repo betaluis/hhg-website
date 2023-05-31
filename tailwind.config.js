@@ -23,6 +23,8 @@ module.exports = {
                     green: "hsl(var(--bkg-green) / <alpha-value>)",
                     light: "hsl(var(--bkg-light) / <alpha-value>)",
                     white: "hsl(var(--bkg-white) / <alpha-value>)",
+                    powerButton: "hsl(var(--bkg-power-button) / <alpha-value>)",
+                    neon: "hsl(var(--bkg-neon) / <alpha-value>)",
                 },
                 accent: {
                     green: "hsl(var(--accent-green) / <alpha-value>)",
