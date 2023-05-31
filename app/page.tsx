@@ -4,6 +4,7 @@ import { Heading, Text } from "@/components/typography/Text";
 import Button from "@/components/Button";
 import BlurEffect from "@/components/BlurEffect";
 import ProductGlowCards from "@/components/ProductGlowCards";
+import PowerButton from "@/components/PowerButton";
 
 export default function Home() {
 
@@ -20,11 +21,14 @@ export default function Home() {
                                         We are mobile power.
                                     </Heading>
                                 </div>
-                                <div className="py-4 max-w-lg m-auto sm:m-0">
-                                    <Text color="light" classes="text-content-light-2">
+                                <div className="relative py-4 max-w-lg m-auto sm:m-0">
+                                    <Text color="light" classes="pt-2 pb-2 text-content-light-2">
                                         <span>Unlock the Power of Your Fleet with Harrison HydraGen.</span>
-                                        <span>Our cutting-edge solutions ensure uninterrupted operation, providing reliable power whether your vehicle is running or at rest.</span>
+                                        <span>Our cutting-edge solutions ensure uninterrupted operation, providing reliable power whether your vehicle is</span>
                                     </Text>
+                                    <div className="absolute bottom-4 right-9">
+                                        <PowerButton type="pill" />
+                                    </div>
                                 </div>
                                 <div className="mt-2 flex flex-col sm:flex-row gap-4">
                                     <Button
