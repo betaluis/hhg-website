@@ -13,7 +13,7 @@ export default function Home() {
             <section className="bg-bkg-green relative">
                 <BlurEffect>
                     <Container classes="bg_people">
-                        <div className="flex">
+                        <div className="flex justify-center sm:justify-start">
                             <div className="pt-24 pb-44 sm:py-32 lg:py-14">
                                 <div className="pt-8 sm:pt-4 lg:pt-0">
                                     <Heading size="h1" color="none" classes="text-hero-heading">

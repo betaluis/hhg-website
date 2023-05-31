@@ -271,7 +271,7 @@ body {
         background-position: 300px 120px;
     }
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 640px) {
     .bg_people {
         background: url('/military-min.png') 25% 470px no-repeat, url("/construction-worker-min.png") 55% 470px no-repeat, url("/fire-min.png") 80% 470px no-repeat;
         background-size: 140px auto;
