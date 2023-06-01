@@ -21,14 +21,15 @@ export default function Home() {
                                         We are mobile power.
                                     </Heading>
                                 </div>
-                                <div className="relative py-4 max-w-lg m-auto sm:m-0">
+                                <div className="py-2 max-w-lg m-auto sm:m-0">
                                     <Text color="light" classes="pt-2 pb-2 text-content-light-2">
-                                        <span>Unlock the Power of Your Fleet with Harrison HydraGen.</span>
-                                        <span>Our cutting-edge solutions ensure uninterrupted operation, providing reliable power whether your vehicle is</span>
+                                        <div className="relative sm:leading-8">
+                                            Cutting edge solutions for uninterrupted operation and reliable power when engine is
+                                            <div className="relative pt-4 sm:bottom-[-12px] sm:absolute sm:right-[50%] lg:right-[33%]">
+                                                <PowerButton type="pill" />
+                                            </div>
+                                        </div>
                                     </Text>
-                                    <div className="absolute bottom-4 right-9">
-                                        <PowerButton type="pill" />
-                                    </div>
                                 </div>
                                 <div className="mt-2 flex flex-col sm:flex-row gap-4">
                                     <Button

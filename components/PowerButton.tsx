@@ -3,11 +3,10 @@
 import { useState } from "react";
 
 interface Props {
-    size?: 8 | 10 | 12 | 14 | 16 | 18 | 20 | 24 | 28 | 32 | 36 | 40 | 44;
     type?: "small" | "pill" | "large";
 }
 
-const PowerButton = ({ size = 32, type = "large" }: Props) => {
+const PowerButton = ({ type = "large" }: Props) => {
 
     const [isOn, setIsOn] = useState(true);
 
@@ -34,31 +33,31 @@ const PowerButton = ({ size = 32, type = "large" }: Props) => {
         <div 
             onClick={handleClick}
             className="
-                relative bg-green-600 inline-block w-16 h-7 rounded-full cursor-pointer
-                shadow-[inset_3px_3px_4px_0_rgba(21,128,61,1),inset_0px_0px_1px_0_rgba(0,0,0,0.25)]
+                relative bg-green-600 inline-block w-20 h-8 rounded-full cursor-pointer
+                shadow-[inset_3px_3px_4px_0_rgba(21,128,61,1),inset_0px_0px_1px_0_rgba(0,0,0,0.4)]
             ">
             <div 
                 className={`
-                    absolute h-5 w-5 rounded-full top-1/2 
-                    -translate-y-1/2 translate-x-1 transition-transform ease-in-out duration-300
-                    z-10 bg-green-600 shadow-[2px_2px_2px_0_rgba(21,128,61,1),0px_0px_4px_0_rgba(0,0,0,0.25)]
-                    ${ isOn ? "translate-x-10" : "translate-x-1" }
+                    absolute h-6 w-6 rounded-full top-1/2 right-0
+                    -translate-y-1/2 transition-transform ease-in-out duration-300
+                    z-10 shadow-[2px_2px_2px_0_rgba(21,128,61,1),0px_0px_4px_0_rgba(0,0,0,0.25)]
+                    ${ isOn ? "bg-green-600 translate-x-[-5px]" : "bg-gray-200 -translate-x-[52px]" }
                 `}
             ></div>
             <div 
                 className={`
-                    absolute right-[8px] top-[3.8px] text-sm
-                    transition-all duration-300 text-white
-                    ${ isOn ? "opacity-0" : "opacity-100 right-[12px]" }
+                    absolute top-[3px]
+                    transition-all text-lg font-bold duration-300 text-white
+                    ${ isOn ? "opacity-0 right-[6px]" : "opacity-100 right-[12px]" }
                 `}
             >
                 OFF
             </div>
             <div 
                 className={`
-                    absolute left-[6px] top-[3.8px] 
-                    text-sm transition-all duration-300 text-white
-                    ${ isOn ? "opacity-100 left-[10px]" : "opacity-0" }
+                    absolute top-[3px] 
+                    text-lg font-bold transition-all duration-300 text-white
+                    ${ isOn ? "opacity-100 left-[14px]" : "opacity-0 left-[8px]" }
                 `}
             >
                 ON

@@ -80,9 +80,6 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
                     </Link>
                     <NavList links={leftNavItems} mr={true} />
                     <NavList links={rightNavItems} />
-                    <div className="ml-2">
-                        <PowerButton type="small" />
-                    </div>
                 </div>
             </Container>
 
