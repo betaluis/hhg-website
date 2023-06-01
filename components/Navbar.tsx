@@ -5,7 +5,6 @@ import Container from "@/components/Container";
 import MobileMenu from "@/components/MobileMenu";
 import ContactIcon from "@/components/icons/ContactIcon";
 import { ChevDown } from "@/components/icons/Generic";
-import PowerButton from "./PowerButton";
 
 interface Props {
     leftNavItems: NavItem[];

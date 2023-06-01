@@ -7,9 +7,9 @@ interface TextProps {
 
 export const Text = ({ children, color = "light", classes, bold }: TextProps) => {
     return (
-        <p className={`text-center sm:text-left text-sm sm:text-base lg:text-lg ${color === "light" ? "text-content-light" : color === "dark" ? "text-content-dark" : "" } ${classes} ${bold ? "font-bold" : ""}`}>
+        <div className={`text-center sm:text-left text-sm sm:text-base lg:text-lg ${color === "light" ? "text-content-light" : color === "dark" ? "text-content-dark" : "" } ${classes} ${bold ? "font-bold" : ""}`}>
             {children}
-        </p>
+        </div>
     )
 }
 
