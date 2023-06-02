@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import MobileMenu from "@/components/MobileMenu";
 import ContactIcon from "@/components/icons/ContactIcon";
 import { ChevDown } from "@/components/icons/Generic";
+import PowerButton from "./PowerButton";
 
 interface Props {
     leftNavItems: NavItem[];
@@ -79,6 +80,9 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
                     </Link>
                     <NavList links={leftNavItems} mr={true} />
                     <NavList links={rightNavItems} />
+                    <div className="ml-2">
+                        <PowerButton type="small" />
+                    </div>
                 </div>
             </Container>
 
