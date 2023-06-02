@@ -1,43 +1,25 @@
 "use client"
 import { motion } from "framer-motion"
-import { useIsSmall } from "@/hooks/useMediaQuery";
+import { useState } from "react";
 
 const OffsetGridImages = () => {
 
-    const isSmall = useIsSmall();
+    const screenWidth = window.innerWidth;
+    const [isSmall, setIsSmall] = useState(screenWidth < 768);
 
-    let textVariants;
-
-    if (isSmall) {
-        console.log("small")
-        textVariants = {
-            animate: {
-                opacity: 1,
-                y: 0,
-            },
-            hidden: {
-                opacity: 0,
-                y: 50,
-            }
+    const textVariant = isSmall ? 
+        {
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 50 }
         }
-        console.log(textVariants)
-    } else {
-        console.log("large")
-        textVariants = {
-            animate: {
-                opacity: 1,
-                x: 0,
-            },
-            hidden: {
-                opacity: 0,
-                x: 50,
-            },
+        :
+        {
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 50 },
         }
-        console.log(textVariants)
-    }
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 lg:pt-32 sm:pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 pb-32 lg:pt-32 sm:pb-32">
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -86,10 +68,10 @@ const OffsetGridImages = () => {
             <div className="flex flex-col justify-center items-start text-center m-auto lg:mx-0 lg:text-start lg:mt-36">
                 <motion.div
                     initial="hidden"
-                    whileInView="animate"
+                    whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    variants={textVariants}
+                    variants={textVariant}
                 >
                    <h2 className="text-xl md:text-2xl font-bold text-content-dark-1">
                         Leading the industry since 1969
