@@ -1,11 +1,10 @@
 "use client"
 import { motion } from "framer-motion"
-import { useState } from "react";
 
 const OffsetGridImages = () => {
 
     const screenWidth = window.innerWidth;
-    const [isSmall, setIsSmall] = useState(screenWidth < 768);
+    const isSmall = screenWidth < 768;
 
     const textVariant = isSmall ? 
         {
