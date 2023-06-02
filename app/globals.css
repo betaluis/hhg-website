@@ -282,7 +282,7 @@ body {
 }
 @media screen and (max-width: 427px) {
     .bg_people {
-        background: url('/military-min.png') 25% 520px no-repeat, url("/construction-worker-min.png") 55% 520px no-repeat, url("/fire-min.png") 80% 520px no-repeat;
+        background: url('/military-min.png') 25% 490px no-repeat, url("/construction-worker-min.png") 55% 490px no-repeat, url("/fire-min.png") 80% 490px no-repeat;
         background-size: 140px auto;
         -webkit-background-size: 140px auto;
         -moz-background-size: 140px auto;

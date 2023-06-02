@@ -1,19 +1,53 @@
 "use client"
 import { motion } from "framer-motion"
+import { useIsSmall } from "@/hooks/useMediaQuery";
 
 const OffsetGridImages = () => {
+
+    const isSmall = useIsSmall();
+
+    let textVariants;
+
+    if (isSmall) {
+        console.log("small")
+        textVariants = {
+            animate: {
+                opacity: 1,
+                y: 0,
+            },
+            hidden: {
+                opacity: 0,
+                y: 50,
+            }
+        }
+        console.log(textVariants)
+    } else {
+        console.log("large")
+        textVariants = {
+            animate: {
+                opacity: 1,
+                x: 0,
+            },
+            hidden: {
+                opacity: 0,
+                x: 50,
+            },
+        }
+        console.log(textVariants)
+    }
+
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 lg:pt-32 sm:pb-32">
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 50 }            
-            }}
-        >
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                variants={{
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: 50 }            
+                }}
+            >
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-2 sm:gap-4 grid-row-1 lg:grid-rows-[repeat(2,150px)]">
                     <div className="lg:bg-red-300 rounded-lg">
                         <img
@@ -51,16 +85,13 @@ const OffsetGridImages = () => {
             </motion.div>
             <div className="flex flex-col justify-center items-start text-center m-auto lg:mx-0 lg:text-start lg:mt-36">
                 <motion.div
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.5 }}
-                      variants={{
-                        visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: 30 }            
-                    }}
+                    initial="hidden"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    variants={textVariants}
                 >
-                    <h2 className="text-xl md:text-2xl font-bold text-content-dark-1">
+                   <h2 className="text-xl md:text-2xl font-bold text-content-dark-1">
                         Leading the industry since 1969
                     </h2>
                     <p className="text-sm md:text-base mt-4 sm:mt-3 md:mt-2 text-content-dark-1 max-w-2xl">
@@ -72,4 +103,4 @@ const OffsetGridImages = () => {
     )
 }
 
-export default OffsetGridImages
+export default OffsetGridImages;
