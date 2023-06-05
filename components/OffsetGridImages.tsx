@@ -1,21 +1,21 @@
 "use client"
 import { motion } from "framer-motion"
+import useScreenWidth from "../hooks/useScreenWidth"
 
 const OffsetGridImages = () => {
 
-    const screenWidth = window.innerWidth;
-    const isSmall = screenWidth < 768;
+    const screenWidth = useScreenWidth();
 
-    const textVariant = isSmall ? 
-        {
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 50 }
-        }
-        :
-        {
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 50 },
-        }
+    if (screenWidth === null) {
+        return null;
+    }
+
+    const variants = {
+        hidden: { x: screenWidth > 768 ? 50 : 0, y: screenWidth <= 768 ? 50 : 0, opacity: 0 },
+        visible: { x: 0, y: 0, opacity: 1 }
+    };
+
+
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 pb-32 lg:pt-32 sm:pb-32">
@@ -70,9 +70,9 @@ const OffsetGridImages = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    variants={textVariant}
+                    variants={variants}
                 >
-                   <h2 className="text-xl md:text-2xl font-bold text-content-dark-1">
+                    <h2 className="text-xl md:text-2xl font-bold text-content-dark-1">
                         Leading the industry since 1969
                     </h2>
                     <p className="text-sm md:text-base mt-4 sm:mt-3 md:mt-2 text-content-dark-1 max-w-2xl">
