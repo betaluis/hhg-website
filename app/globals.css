@@ -390,7 +390,10 @@ body {
     transition: all 0.2s ease-in-out;
 } 
 .card-blur:hover > .card-content {
-    background-color: hsl(var(--bkg-light));
+    background: hsl(220, 23%, 93%);
+}
+:root[data-theme="dark"] .card-blur:hover > .card-content {
+    background: hsl(var(--bkg-light));
 }
 .card-blur::before,
 .card-blur::after {
@@ -429,6 +432,9 @@ body {
         box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.2);
         outline: none;
     }
+    :root[data-theme="light"] .card-blur {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
     .card-blur:hover > .card-content {
         outline: none;
     }
@@ -440,6 +446,9 @@ body {
             );
         z-index: 3;
     }
+    :root[data-theme="light"] .card-blur::before {
+        background: none;
+    }
     .card-blur::after {
         background: radial-gradient(
             500px circle at var(--x-mouse) var(--y-mouse), 
@@ -447,6 +456,12 @@ body {
             transparent 40%
             );
         z-index: 1;
+    }
+    :root[data-theme="light"] .card-blur::after {
+        background: none;
+    }
+    :root[data-theme="light"] .card-blur:hover .card-content {
+        background: hsl(220, 23%, 93%);
     }
 }
 :root[data-theme="dark"] .card-blur {
