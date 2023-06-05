@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Container from "@/components/Container";
 import Products from "@/data/Products";
 import { Heading, Text } from "@/components/typography/Text";
@@ -6,7 +5,6 @@ import Button from "@/components/Button";
 import BlurEffect from "@/components/BlurEffect";
 import ProductGlowCards from "@/components/ProductGlowCards";
 import PowerButton from "@/components/PowerButton";
-import { AnimatePresence, motion } from "framer-motion";
 import OffsetGridImages from "@/components/OffsetGridImages";
 
 export default function Home() {
