@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import Container from "@/components/Container";
 import MobileMenu from "@/components/MobileMenu";
 import ContactIcon from "@/components/icons/ContactIcon";
@@ -21,7 +20,11 @@ interface NavListProps {
 
 const SubList = ({ items }: { items: NavItem[] }) => {
     return (
-        <ul className="rounded-lg triangle absolute -left-12 top-14 bg-bkg-light min-w-[280px] p-4 opacity-0 pointer-events-none before:block before:h-4 before:w-full before:absolute before:-top-4 before:left-0 group-hover:pointer-events-auto group-hover:opacity-100 duration-150 transition-opacity">
+        <ul className="
+            rounded-lg triangle absolute -left-12 top-14 bg-bkg-light min-w-[280px] p-4 opacity-0 pointer-events-none before:block before:h-4 before:w-full before:absolute before:-top-4 before:left-0 group-hover:pointer-events-auto group-hover:opacity-100 duration-150 transition-opacity
+            after:absolute after:-top-2 after:left-[32%] after:border-t-0 after:border-r-0 after:border-t-transparent after:border-r-transparent
+            after:border-l-[20px] after:border-l-transparent after:border-b-bkg-light after:border-b-[20x] after:rotate-[225deg]
+        ">
             {items && items.map(({ href, label, icon }, index) => (
                 <Link key={index} href={href}>
                     <li className="text-sm flex items-center space-x-3 py-3 px-3 rounded-lg hover:bg-hover-gray">

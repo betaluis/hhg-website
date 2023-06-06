@@ -188,7 +188,6 @@
     }
 }
 
-
 body {
     font-family: 'Noto Sans', sans-serif;
 }
@@ -196,22 +195,6 @@ body {
 /* Custom Utils */
 .flip-y {
     transform: rotateY(180deg);
-}
-
-.triangle::after {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 32%;
-    border-top: 0 solid transparent;
-    border-right: 0 solid transparent;
-    border-left: 20px solid transparent;
-    transform: rotate(225deg);
-    @apply border-b-bkg-light border-b-[20px];
-}
-
-.fade-out {
-    transition: opacity 0.2s ease-in-out;
 }
 
 /* Background Images */
@@ -300,42 +283,9 @@ body {
 }
 
 /* Gradient Blur Hover Effect (section type) */
-.gradient-blur {
-    background-color: var(--bkg-green);
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 .gradient-blur:hover::before,
 .gradient-blur:hover::after{
     opacity: 1;
-}
-.gradient-blur::before,
-.gradient-blur::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.4s ease-out 0.1s;
-}
-.gradient-blur::before {
-    z-index: 3;
-}
-.gradient-blur::after {
-    z-index: 1;
-}
-.gradient-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 3px);
-    background: hsl(var(--bkg-green));
-    margin: 1.5px 0;
-    z-index: 2;
 }
 
 /* Gradient Dark Mode */
@@ -380,50 +330,8 @@ body {
     opacity: 1;
 }
 
-.card-blur {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    transition: all 0.2s ease-in-out;
-} 
-.card-blur:hover > .card-content {
-    background: hsl(220, 23%, 93%);
-}
 :root[data-theme="dark"] .card-blur:hover > .card-content {
     background: hsl(var(--bkg-light));
-}
-.card-blur::before,
-.card-blur::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.4s ease-out 0.1s;
-    border-radius: 8px;
-}
-.card-blur::before {
-    z-index: 3;
-}
-.card-blur::after {
-    z-index: 1;
-}
-.card-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    background: hsl(var(--bkg-light));
-    margin: 1px;
-    padding: 1rem;
-    z-index: 2;
-    border-radius: 8px;
 }
 
 /* Gradient Dark Mode for Cards */
@@ -513,6 +421,8 @@ body {
     box-shadow: 0 0 12px 0px hsl(var(--bkg-neon)),
         0 0 0px 10px hsl(var(--bkg-power-button));
 }
+
+/* Logo */
 :root[data-theme="dark"] .white-logo {
     display: block;
 }

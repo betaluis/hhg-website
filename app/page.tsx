@@ -3,7 +3,7 @@ import Products from "@/data/Products";
 import { Heading, Text } from "@/components/typography/Text";
 import Button from "@/components/Button";
 import BlurEffect from "@/components/BlurEffect";
-import ProductGlowCards from "@/components/ProductGlowCards";
+import ProductCards from "@/components/ProductCards";
 import PowerButton from "@/components/PowerButton";
 import OffsetGridImages from "@/components/OffsetGridImages";
 
@@ -58,7 +58,7 @@ export default function Home() {
 
 
             {/* Products section */}
-            <ProductGlowCards products={Products} />
+            <ProductCards products={Products} />
 
             {/* About section */}
             <section className="bg-bkg-white">

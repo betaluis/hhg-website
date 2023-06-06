@@ -15,6 +15,7 @@ type ImageType = {
     src: string;
     alt: string;
 }
+
 type Product = {
     href: string;
     label: string;
@@ -25,4 +26,11 @@ type Product = {
         width: number;
         height: number;
     };
+}
+
+type Testimonial = {
+    name: string;
+    company: string;
+    image: ImageType;
+    quote: string;
 }
