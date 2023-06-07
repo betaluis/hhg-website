@@ -37,7 +37,7 @@ const Products: Product[] = [
         label: "Other Components",
         image: {
             src: "/products/other-components.png",
-            alt: "Other Components",
+            alt: "Auxilary Components",
             width: 200,
             height: 200,
             scale: "small",
