@@ -74,7 +74,7 @@
         :root[data-theme="dark"] {
             --bkg-green: 240deg 5.9% 10%;
             --bkg-white: 240deg 5.9% 10%;
-            --bkg-light: 240deg 3.7% 15.9%;
+            --bkg-light: 240deg 3.7% 18.9%;
             --hover-gray: 240deg 3.9% 14%;
 
             --bkg-power-button: 240deg 5.3% 26.1%;
@@ -106,7 +106,7 @@
         :root {
             --bkg-green: 240deg 5.9% 10%;
             --bkg-white: 240deg 5.9% 10%;
-            --bkg-light: 240deg 3.7% 15.9%;
+            --bkg-light: 240deg 3.7% 18.9%;
             --hover-gray: 240deg 3.9% 14%;
 
             --bkg-power-button: 240deg 5.3% 26.1%;
@@ -165,7 +165,7 @@
         :root[data-theme="dark"] {
                 --bkg-green: 240deg 5.9% 10%;
                 --bkg-white: 240deg 5.9% 10%;
-                --bkg-light: 240deg 3.7% 15.9%;
+                --bkg-light: 240deg 3.7% 18.9%;
                 --hover-gray: 240deg 3.9% 14%;
 
                 --bkg-power-button: 240deg 5.3% 26.1%;
@@ -394,6 +394,32 @@ body {
         transparent 40%
         );
     z-index: 1;
+}
+
+/* Power Text */
+ 
+:root[data-theme="dark"] .power {
+    --bg-size: 400%;
+    --bg-move: -400%;
+    --color-one: hsl(141.89999999999998deg 69.2% 58%);
+    --color-two: hsl(142.10000000000002deg 76.2% 36.3%);
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+        ) 0 0 / var(--bg-size) 100%;    
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+    to {
+        background-position: var(--bg-move) 0;
+    }
 }
 
 /* Power button and logo in dark mode*/
