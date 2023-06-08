@@ -6,6 +6,7 @@ import BlurEffect from "@/components/BlurEffect";
 import ProductCards from "@/components/ProductCards";
 import PowerButton from "@/components/PowerButton";
 import OffsetGridImages from "@/components/OffsetGridImages";
+import TestimonialGrid from "@/components/testimonials/TestimonialGrid";
 
 export default function Home() {
 
@@ -19,7 +20,7 @@ export default function Home() {
                             <div className="pt-24 pb-44 sm:py-32 lg:py-14">
                                 <div className="pt-8 sm:pt-4 lg:pt-0">
                                     <Heading size="h1" color="none" classes="text-hero-heading">
-                                        We are mobile power.
+                                        We are mobile <span className="power">power.</span>
                                     </Heading>
                                 </div>
                                 <div className="py-2 max-w-lg m-auto sm:m-0">
@@ -64,6 +65,19 @@ export default function Home() {
             <section className="bg-bkg-white">
                 <Container>
                     <OffsetGridImages />
+                </Container>
+            </section>
+
+            {/* Testimonials section */}
+            <section className="bg-bkg-white py-24">
+                <Container>
+                    <h2 className="text-2xl md:text-2xl font-bold text-content-dark-1">
+                        Satisfied Customers Speak
+                    </h2>
+                    <p className="text-sm md:text-base mt-4 sm:mt-3 md:mt-2 text-content-dark-1 max-w-2xl">
+                        Don&apos;t just take our word for it. Learn how we have made an impact across various industries with our innovative power solutions.
+                    </p>
+                    <TestimonialGrid />
                 </Container>
             </section>
         </>

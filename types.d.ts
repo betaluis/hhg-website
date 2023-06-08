@@ -32,5 +32,5 @@ type Testimonial = {
     name: string;
     company: string;
     image: ImageType;
-    quote: string;
+    quote: string[];
 }

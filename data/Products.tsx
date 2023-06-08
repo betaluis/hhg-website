@@ -34,7 +34,7 @@ const Products: Product[] = [
     },
     {
         href: "/products/other-components",
-        label: "Other Components",
+        label: "Auxilary Components",
         image: {
             src: "/products/other-components.png",
             alt: "Auxilary Components",
