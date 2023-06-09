@@ -71,9 +71,9 @@ export default function Home() {
             {/* Testimonials section */}
             <section className="bg-bkg-white py-24">
                 <Container>
-                    <h2 className="text-2xl md:text-2xl font-bold text-content-dark-1">
+                    <Heading size="h2" color="dark">
                         Satisfied Customers Speak
-                    </h2>
+                    </Heading>
                     <p className="text-sm md:text-base mt-4 sm:mt-3 md:mt-2 text-content-dark-1 max-w-2xl">
                         Don&apos;t just take our word for it. Learn how we have made an impact across various industries with our innovative power solutions.
                     </p>

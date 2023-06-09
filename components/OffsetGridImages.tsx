@@ -29,6 +29,7 @@ const OffsetGridImages = () => {
                     hidden: { opacity: 0, y: 50 }            
                 }}
             >
+                {/* TODO: Review images before production */}
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-2 sm:gap-4 grid-row-1 lg:grid-rows-[repeat(2,150px)]">
                     <div className="lg:bg-red-300 rounded-lg">
                         <img

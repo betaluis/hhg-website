@@ -28,7 +28,11 @@ export const Heading = ({ children, size,  color = "light", classes }: HeadingPr
             );
         case "h2":
             return (
-                <h2 className={`text-center sm:text-left text-xl sm:text-2xl lg:text-3xl font-bold ${color === "light" ? "text-content-light" : "text-content-dark"} ${classes}`}>
+                <h2 className={`
+                    text-2xl md:text-2xl font-bold text-content-dark-1 
+                    ${color === "light" ? "text-content-light" : "text-content-dark"}
+                    ${classes}
+                `}>
                     {children}
                 </h2>
             );
