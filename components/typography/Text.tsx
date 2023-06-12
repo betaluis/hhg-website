@@ -1,6 +1,6 @@
 interface TextProps {
     children: React.ReactNode;
-    color?: "light" | "dark" | "none";
+    color: "light" | "dark" | "none";
     classes?: string;
     bold?: boolean;
 }
@@ -29,8 +29,8 @@ export const Heading = ({ children, size,  color = "light", classes }: HeadingPr
         case "h2":
             return (
                 <h2 className={`
-                    text-2xl md:text-2xl font-bold text-content-dark-1 
-                    ${color === "light" ? "text-content-light" : "text-content-dark"}
+                    text-xl md:text-2xl font-bold
+                    ${color === "light" ? "text-content-light-1" : "text-content-dark-1"}
                     ${classes}
                 `}>
                     {children}
@@ -39,4 +39,20 @@ export const Heading = ({ children, size,  color = "light", classes }: HeadingPr
         default:
             return null;
     }
+}
+
+export const SubText = ({ children, color, bold = false, classes }: TextProps) => {
+    return (
+        <p
+            className={`
+                text-sm mt-4 max-w-2xl
+                sm:mt-3 
+                md:text-base md:mt-2 
+                ${color === "light" ? "text-content-light-1" : "text-content-dark-1"}
+                ${classes}
+            `}
+        >
+            {children}
+        </p>
+    )
 }

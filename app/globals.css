@@ -72,6 +72,8 @@
             --outline-slate-to-gray: 210deg 40% 96.1%;
         }
         :root[data-theme="dark"] {
+            --primary: 141.89999999999998deg 69.2% 58%;
+
             --bkg-green: 240deg 5.9% 10%;
             --bkg-white: 240deg 5.9% 10%;
             --bkg-light: 240deg 3.7% 18.9%;
@@ -104,6 +106,8 @@
 
     @media (prefers-color-scheme: dark) {
         :root {
+            --primary: 141.89999999999998deg 69.2% 58%;
+
             --bkg-green: 240deg 5.9% 10%;
             --bkg-white: 240deg 5.9% 10%;
             --bkg-light: 240deg 3.7% 18.9%;
@@ -163,27 +167,29 @@
             --outline-slate-to-gray: 210deg 40% 96.1%;
         }
         :root[data-theme="dark"] {
-                --bkg-green: 240deg 5.9% 10%;
-                --bkg-white: 240deg 5.9% 10%;
-                --bkg-light: 240deg 3.7% 18.9%;
-                --hover-gray: 240deg 3.9% 14%;
+            --primary: 141.89999999999998deg 69.2% 58%;
 
-                --bkg-power-button: 240deg 5.3% 26.1%;
-                --bkg-neon: 142.10000000000002deg 70.6% 45.3%;
+            --bkg-green: 240deg 5.9% 10%;
+            --bkg-white: 240deg 5.9% 10%;
+            --bkg-light: 240deg 3.7% 18.9%;
+            --hover-gray: 240deg 3.9% 14%;
 
-                --content-light: 220deg 13% 87%;
-                --content-light-2: 240deg 5.2% 60%;
-                --content-dark: 220deg 13% 87%;
-                --content-dark-2: 220deg 13% 87%;
-                --hero-heading: 220deg 13% 87%;
+            --bkg-power-button: 240deg 5.3% 26.1%;
+            --bkg-neon: 142.10000000000002deg 70.6% 45.3%;
 
-                --dark-gradient-to: 240deg 6% 30%;
-                --dark-gradient-from: 240deg 3.7% 15.9%;
-                --dark-gradient-to-hover: 240deg 6% 33%;
-                --dark-gradient-from-hover: 240deg 6% 20%;
+            --content-light: 220deg 13% 87%;
+            --content-light-2: 240deg 5.2% 60%;
+            --content-dark: 220deg 13% 87%;
+            --content-dark-2: 220deg 13% 87%;
+            --hero-heading: 220deg 13% 87%;
 
-                /* Outline */
-                --outline-slate-to-gray: 240deg 10% 30%;
+            --dark-gradient-to: 240deg 6% 30%;
+            --dark-gradient-from: 240deg 3.7% 15.9%;
+            --dark-gradient-to-hover: 240deg 6% 33%;
+            --dark-gradient-from-hover: 240deg 6% 20%;
+
+            /* Outline */
+            --outline-slate-to-gray: 240deg 10% 30%;
         }
     }
 }
@@ -397,7 +403,7 @@ body {
 }
 
 /* Power Text */
- 
+
 :root[data-theme="dark"] .power {
     --bg-size: 400%;
     --bg-move: -400%;
@@ -417,9 +423,9 @@ body {
 }
 
 @keyframes gradient {
-    to {
-        background-position: var(--bg-move) 0;
-    }
+to {
+    background-position: var(--bg-move) 0;
+}
 }
 
 /* Power button and logo in dark mode*/

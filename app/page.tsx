@@ -1,12 +1,13 @@
 import Container from "@/components/Container";
 import Products from "@/data/Products";
-import { Heading, Text } from "@/components/typography/Text";
+import { Heading, SubText, Text } from "@/components/typography/Text";
 import Button from "@/components/Button";
 import BlurEffect from "@/components/BlurEffect";
 import ProductCards from "@/components/ProductCards";
 import PowerButton from "@/components/PowerButton";
 import OffsetGridImages from "@/components/OffsetGridImages";
 import TestimonialGrid from "@/components/testimonials/TestimonialGrid";
+import { FadeUp } from "@/components/Animations";
 
 export default function Home() {
 
@@ -69,15 +70,22 @@ export default function Home() {
             </section>
 
             {/* Testimonials section */}
-            <section className="bg-bkg-white py-24">
+            <section 
+                className="
+                    bg-bkg-white pt-12 pb-24
+                    lg:pt-24
+                "
+            >
                 <Container>
-                    <Heading size="h2" color="dark">
-                        Satisfied Customers Speak
-                    </Heading>
-                    <p className="text-sm md:text-base mt-4 sm:mt-3 md:mt-2 text-content-dark-1 max-w-2xl">
-                        Don&apos;t just take our word for it. Learn how we have made an impact across various industries with our innovative power solutions.
-                    </p>
-                    <TestimonialGrid />
+                    <FadeUp>
+                        <Heading size="h2" color="dark" bold={false}>
+                            Satisfied Customers Speak
+                        </Heading>
+                        <SubText color="dark">
+                            Don&apos;t just take our word for it. Learn how we have made an impact across various industries with our innovative power solutions.
+                        </SubText>
+                        <TestimonialGrid />
+                    </FadeUp>
                 </Container>
             </section>
         </>

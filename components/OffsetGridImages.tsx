@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import useScreenWidth from "../hooks/useScreenWidth"
+import { Heading, SubText } from "./typography/Text";
 
 const OffsetGridImages = () => {
 
@@ -11,14 +12,16 @@ const OffsetGridImages = () => {
     }
 
     const variants = {
-        hidden: { x: screenWidth > 768 ? 50 : 0, y: screenWidth <= 768 ? 50 : 0, opacity: 0 },
+        hidden: { x: screenWidth > 768 ? -50 : 0, y: screenWidth <= 768 ? 50 : 0, opacity: 0 },
         visible: { x: 0, y: 0, opacity: 1 }
     };
 
-
-
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 pb-32 lg:pt-32 sm:pb-32">
+        <div className="
+                grid grid-cols-1 gap-8 pt-4 
+                lg:grid-cols-2 lg:pt-32 lg:pb-32
+            "
+        >
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -65,7 +68,12 @@ const OffsetGridImages = () => {
                     </div>
                 </div>
             </motion.div>
-            <div className="flex flex-col justify-center items-start text-center m-auto lg:mx-0 lg:text-start lg:mt-36">
+            <div className="
+                row-start-1 mt-4 flex flex-col justify-center items-start m-auto 
+                sm:text-center
+                md:row-start-2
+                lg:row-start-1 lg:mx-0 lg:text-start lg:mt-36"
+            >
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -73,12 +81,12 @@ const OffsetGridImages = () => {
                     transition={{ duration: 1, delay: 0.5 }}
                     variants={variants}
                 >
-                    <h2 className="text-xl md:text-2xl font-bold text-content-dark-1">
+                    <Heading size="h2" color="dark">
                         Leading the industry since 1969
-                    </h2>
-                    <p className="text-sm md:text-base mt-4 sm:mt-3 md:mt-2 text-content-dark-1 max-w-2xl">
+                    </Heading>
+                    <SubText>
                         For over five decades, Harrison HydraGen has been at the forefront of the industry, revolutionizing mobile power solutions. With our extensive experience and expertise, we have set the standard for excellence and innovation in the field.
-                    </p>
+                    </SubText>
                 </motion.div>
             </div>
         </div>

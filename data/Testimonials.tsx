@@ -12,7 +12,7 @@ export const testimonials: Testimonial[] = [
     },
     {
         name: "Adam Fischer",
-        company: "Frazier Built",
+        company: "Frazer Built",
         quote: [
             "Frazer has been working with Harrison and our local sales rep, Azael Garcia, since late 2019 and the partnership has been valuable to our organization. As a provider of emergency vehicles, reducing idling time is crucial to our customers' operational success and Harrison's h-Power idle mitigation system has met our expectations. In some cases, we've seen a reduction in idling time by more than 50%, which has not only improved our customers' fuel efficiency reducing costs, but can extend the life in-service of the vehicle enhancing our customer experience.",
             "One of the things we appreciate about Harrison is their deep interest in how their product impacts our operations and the end user experience. They take a collaborative approach, always looking for ways to improve and make sure their solutions are meeting our customers needs.",
