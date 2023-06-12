@@ -1,6 +1,5 @@
 import Container from "@/components/Container";
 import Products from "@/data/Products";
-import { Heading, SubText, Text } from "@/components/typography/Text";
 import Button from "@/components/Button";
 import BlurEffect from "@/components/BlurEffect";
 import ProductCards from "@/components/ProductCards";
@@ -8,6 +7,7 @@ import PowerButton from "@/components/PowerButton";
 import OffsetGridImages from "@/components/OffsetGridImages";
 import TestimonialGrid from "@/components/testimonials/TestimonialGrid";
 import { FadeUp } from "@/components/Animations";
+import { Heading, SubText, Text } from "@/components/typography/Text";
 
 export default function Home() {
 

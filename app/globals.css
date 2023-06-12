@@ -423,9 +423,9 @@ body {
 }
 
 @keyframes gradient {
-to {
-    background-position: var(--bg-move) 0;
-}
+    to {
+        background-position: var(--bg-move) 0;
+    }
 }
 
 /* Power button and logo in dark mode*/

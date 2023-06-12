@@ -29,7 +29,7 @@ const BlurEffect = ({ children, items }: Props) => {
             " 
             onMouseMove={(e: React.MouseEvent) => handleMouse(e)}
         >
-            <div className="gradient-content absolute top-0 left-0 w-full h-[calc(100%-3px)] bg-bkg-green m-[1.5px] rounded-lg z-[2]">
+            <div className="gradient-content absolute top-0 left-0 w-full h-[calc(100%-3px)] bg-bkg-green mt-[1.5px] rounded-lg z-[2]">
             </div>
             <div className="z-10 relative">
                 {children}

@@ -3,7 +3,9 @@ export const testimonials: Testimonial[] = [
         name: "Tom Harris",
         company: "East Baton Rouge EMS",
         quote: [
-            "East Baton Rouge Parish EMS has been utilizing the Harrison Battery system on one of our ambulances for approximately 6 months.  During this time the system has performed perfectly,   It has reduced our “idle” time by approximately 50% with a very notable savings in fuel ( on an average of 0ver $800.00) per month and has extended the maintenance on our vehicle greatly another notable cost savings plus reducing our carbon footprint greatly.  All feedback from our crews has been extremely positive.     EMS has our vehicles serviced every 200 hours.  Which equated to being done approximately once a month if not sooner.   It has also extended our warranty on the new unit greatly with less hours on the motor and chassis as a whole.     EMS especially appreciates the instant feed back on the system through the application for computers and electronic devices.   The customer service is by far some of the best EMS has ever received especially with customizing the settings on the system for our specific needs.",
+            "East Baton Rouge Parish EMS has been utilizing the Harrison Battery system on one of our ambulances for approximately 6 months.  During this time the system has performed perfectly,   It has reduced our “idle” time by approximately 50% with a very notable savings in fuel ( on an average of 0ver $800.00) per month and has extended the maintenance on our vehicle greatly another notable cost savings plus reducing our carbon footprint greatly.",
+            "All feedback from our crews has been extremely positive. EMS has our vehicles serviced every 200 hours.  Which equated to being done approximately once a month if not sooner.   It has also extended our warranty on the new unit greatly with less hours on the motor and chassis as a whole. EMS especially appreciates the instant feed back on the system through the application for computers and electronic devices.",
+            "The customer service is by far some of the best EMS has ever received especially with customizing the settings on the system for our specific needs.",
         ],
         image: {
             src: "",
@@ -49,7 +51,8 @@ export const testimonials: Testimonial[] = [
         name: "Justin W. Frost",
         company: "BFX Fire Apparatus",
         quote: [
-            "Our relationship with Harrison Hydra-Gen started 5+ years ago with a concept that came to fruition in 2019.  The efforts by Troy Padgett, and Harrison Hydra-Gen’s Engineers, was unmeasurable and their attention to detail during the project was great.  As a result of everyone’s efforts, our end-user was so pleased with the result that they ordered a second fire apparatus with the hydraulic system almost immediately.  Harrison Hydra-Gen’s commitment to ensuring that all parties involved were completely satisfied exemplifies their desire to be a first-class company.",
+            "Our relationship with Harrison Hydra-Gen started 5+ years ago with a concept that came to fruition in 2019.  The efforts by Troy Padgett, and Harrison Hydra-Gen’s Engineers, was unmeasurable and their attention to detail during the project was great.",
+            "As a result of everyone’s efforts, our end-user was so pleased with the result that they ordered a second fire apparatus with the hydraulic system almost immediately.  Harrison Hydra-Gen’s commitment to ensuring that all parties involved were completely satisfied exemplifies their desire to be a first-class company.",
         ],
         image: {
             src: "/testimonials/justin-frost.png",
@@ -71,7 +74,8 @@ export const testimonials: Testimonial[] = [
         name: "Tommy Moak",
         company: "City of Fort Worth Fire Department",
         quote: [
-            "The first generator retrofit went very well. The technical assistance you got set up for us was a great help in facilitating the install, especially  getting the hydraulic pump exchanged for us and then checking back later to make sure everything was working correctly. Thanks also for getting a maintenance class set up for the technicians. Looks like we will be retrofitting another truck in the near future, I’ll get with you as soon as I can get the truck over here and see what we need.",
+            "The first generator retrofit went very well. The technical assistance you got set up for us was a great help in facilitating the install, especially  getting the hydraulic pump exchanged for us and then checking back later to make sure everything was working correctly.",
+            "Thanks also for getting a maintenance class set up for the technicians. Looks like we will be retrofitting another truck in the near future, I’ll get with you as soon as I can get the truck over here and see what we need.",
         ],
         image: {
             src: "",
@@ -93,7 +97,10 @@ export const testimonials: Testimonial[] = [
         name: "Troy Green",
         company: "Wireline Truck Fab",
         quote: [
-            "In the past year we have installed Harrison Hydra-Gen Generators in the units that we build and refurb for customers around the world. Harrison is the generator of choice for us because of their versatility, ease of install, and most of all the because of the service we receive from the Harrison Hydra-Gen Staff. Azael Garcia is phenomenal when it comes to servicing our account, our staff, and our customers. Between Azael and John Mann we could not ask for a better service team, our questions are answered immediately, our concerns are addressed with professionalism not seen in today’s business climate, and resolution is ALWAYS at the forefront. Our customers are in the world of 24/7/365 and every job is mission critical. When issues arise, we never get the typical response of “We will have to get back to you” from Harrison Hydra-Gen, all we ever hear is “We are on it” and that is where this service team jumps into action and doesn’t quit until the job is done and the customer is up and running. Recently a customer was in the field when a generator unit started leaking fluid, Azael Garcia coordinated with the customer to set up diagnostics and repair. When the job got extended and the unit could not return to its operating base, Azael jumped into action, grabbed a service technician and drove to the customers location. After minimal diagnostics, the technician found the issue, and made the repair. In today’s environment you just can’t find service like that. Thank you. This is why Harrison Hydra-Gen is and will continue to be our first call for our power generation needs",
+            "In the past year we have installed Harrison Hydra-Gen Generators in the units that we build and refurb for customers around the world. Harrison is the generator of choice for us because of their versatility, ease of install, and most of all the because of the service we receive from the Harrison Hydra-Gen Staff.", 
+            "Azael Garcia is phenomenal when it comes to servicing our account, our staff, and our customers. Between Azael and John Mann we could not ask for a better service team, our questions are answered immediately, our concerns are addressed with professionalism not seen in today’s business climate, and resolution is ALWAYS at the forefront. Our customers are in the world of 24/7/365 and every job is mission critical.",
+            "When issues arise, we never get the typical response of “We will have to get back to you” from Harrison Hydra-Gen, all we ever hear is “We are on it” and that is where this service team jumps into action and doesn’t quit until the job is done and the customer is up and running. Recently a customer was in the field when a generator unit started leaking fluid, Azael Garcia coordinated with the customer to set up diagnostics and repair.",
+            "When the job got extended and the unit could not return to its operating base, Azael jumped into action, grabbed a service technician and drove to the customers location. After minimal diagnostics, the technician found the issue, and made the repair. In today’s environment you just can’t find service like that. Thank you. This is why Harrison Hydra-Gen is and will continue to be our first call for our power generation needs",
         ],
         image: {
             src: "/testimonials/troy-green.png",
