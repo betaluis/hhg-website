@@ -66,7 +66,7 @@ const FullTestimonial = ({ testimonial, closeModal }: { testimonial: Testimonial
             <div className="flex gap-4">
                 <TestimonialImage testimonial={testimonial} />
                 <Source testimonial={testimonial} />
-                {/* Fix hover color */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" id="x"><path fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 1 1 13M1 1l12 12"></path></svg>{/* Fix hover color */}
                 <button 
                     onClick={closeModal} 
                     className="block p-3 rounded-full hover:bg-bkg-white absolute -top-6 -right-6"

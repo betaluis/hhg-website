@@ -84,7 +84,7 @@ const OffsetGridImages = () => {
                     <Heading size="h2" color="dark">
                         Leading the industry since 1969
                     </Heading>
-                    <SubText>
+                    <SubText color="dark">
                         For over five decades, Harrison HydraGen has been at the forefront of the industry, revolutionizing mobile power solutions. With our extensive experience and expertise, we have set the standard for excellence and innovation in the field.
                     </SubText>
                 </motion.div>
