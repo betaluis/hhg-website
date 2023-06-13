@@ -30,7 +30,8 @@ const PowerButton = ({ type = "large" }: Props) => {
     )
 
     if (type === "pill") return (
-        <div 
+        <div
+            tabIndex={0}
             onClick={handleClick}
             className="
                 relative bg-green-600 inline-block w-20 h-8 rounded-full cursor-pointer
