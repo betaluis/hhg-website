@@ -35,6 +35,7 @@ export default function Home() {
 
 
             {/* Features section */}
+            <Features />
 
             {/* Testimonials section */}
             <section 
