@@ -34,12 +34,7 @@ export default function Home() {
             </section>
 
 
-            {/* Testimonials section */}
-            <section className="bg-bkg-white">
-                <Container>
-                    <Features />
-                </Container>
-            </section>
+            {/* Features section */}
 
             {/* Testimonials section */}
             <section 
