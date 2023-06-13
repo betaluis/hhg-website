@@ -141,22 +141,20 @@ const TestimonialCard = ({ testimonial }: Props) => {
     }
 
     return (
-        <>
-            <FadeUp>
-                <div>
-                    <TestimonialQuote testimonial={testimonial} openModal={openModal} />
-                    <div className="flex items-center gap-4 mt-4">
-                        <TestimonialImage testimonial={testimonial} />
-                        <Source testimonial={testimonial} />
-                    </div>
+        <FadeUp y={50} delay={0}>
+            <div>
+                <TestimonialQuote testimonial={testimonial} openModal={openModal} />
+                <div className="flex items-center gap-4 mt-4">
+                    <TestimonialImage testimonial={testimonial} />
+                    <Source testimonial={testimonial} />
                 </div>
-                <dialog ref={dialogRef}
-                    className="bg-bkg-light mx-[20px] p-8 rounded-lg max-w-2xl shadow-[0px_4px_5px_2px_rgba(0,0,0,0.2)] md:mx-auto"
-                >
-                    <FullTestimonial testimonial={testimonial} closeModal={closeModal} /> 
-                </dialog>
-            </FadeUp>
-        </>
+            </div>
+            <dialog ref={dialogRef}
+                className="bg-bkg-light mx-[20px] p-8 rounded-lg max-w-2xl shadow-[0px_4px_5px_2px_rgba(0,0,0,0.2)] md:mx-auto"
+            >
+                <FullTestimonial testimonial={testimonial} closeModal={closeModal} /> 
+            </dialog>
+        </FadeUp>
     )
 }
 

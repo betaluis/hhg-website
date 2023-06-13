@@ -34,3 +34,9 @@ type Testimonial = {
     image: ImageType;
     quote: string[];
 }
+
+type Feature = {
+    icon: JSX.Element;
+    title: string;
+    description: string;
+}

@@ -5,16 +5,24 @@ interface TextProps {
     bold?: boolean;
 }
 
+interface HeadingProps extends TextProps{
+    size: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
 export const Text = ({ children, color = "light", classes, bold }: TextProps) => {
     return (
-        <div className={`text-center sm:text-left text-sm sm:text-base lg:text-lg ${color === "light" ? "text-content-light" : color === "dark" ? "text-content-dark" : "" } ${classes} ${bold ? "font-bold" : ""}`}>
+        <div 
+            className={
+                `text-center text-sm
+                sm:text-left sm:text-base
+                lg:text-lg 
+                ${color === "light" ? "text-content-light" : color === "dark" ? "text-content-dark" : "" } 
+                ${classes} ${bold ? "font-bold" : ""}`
+            }
+        >
             {children}
         </div>
     )
-}
-
-interface HeadingProps extends TextProps{
-    size: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
 // TODO: Create the rest
@@ -36,6 +44,16 @@ export const Heading = ({ children, size,  color = "light", classes }: HeadingPr
                     {children}
                 </h2>
             );
+        case "h3":
+            return (
+                <h2 className={`
+                    text-md md:text-lg font-bold
+                    ${color === "light" ? "text-content-light-1" : "text-content-dark-1"}
+                    ${classes}
+                `}>
+                    {children}
+                </h2>
+            );
         default:
             return null;
     }
@@ -49,6 +67,7 @@ export const SubText = ({ children, color, bold = false, classes }: TextProps) =
                 sm:mt-3 
                 md:text-base md:mt-2 
                 ${color === "light" ? "text-content-light-1" : "text-content-dark-1"}
+                ${bold ? "font-bold" : ""}
                 ${classes}
             `}
         >
