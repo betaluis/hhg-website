@@ -20,7 +20,7 @@ const TestimonialQuote = ({ testimonial, openModal }: QuoteProps) => {
         testimonial.quote && testimonial.quote[0].length > 180 ? (
             <p className="text-sm text-content-dark-1">
                 &quot;{testimonial.quote[0].slice(0, 180)}...&quot;
-                &nbsp;<button className="text-primary underline cursor-pointer" onClick={openModal}>more</button>
+                &nbsp;<button className="text-primary underline cursor-pointer focus:outline-primary focus:border-none" onClick={openModal}>read more</button>
             </p>
         ) : (
                 <p className="text-sm text-content-dark-1">{testimonial.quote[0]}</p>
@@ -68,9 +68,9 @@ const FullTestimonial = ({ testimonial, closeModal }: { testimonial: Testimonial
                 <Source testimonial={testimonial} />
                 <button 
                     onClick={closeModal} 
-                    className="block p-3 rounded-full hover:bg-bkg-light absolute -top-6 -right-6"
+                    className="block p-3 rounded-full hover:bg-hover-gray absolute -top-6 -right-6"
                 >
-                    <svg className="stroke-content-dark-2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" id="x"><path fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 1 1 13M1 1l12 12"></path></svg>
+                    <svg className="stroke-content-dark-1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" id="x"><path fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 1 1 13M1 1l12 12"></path></svg>
                 </button>
             </div>
             {
