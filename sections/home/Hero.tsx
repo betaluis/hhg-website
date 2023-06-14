@@ -58,13 +58,7 @@ const Buttons = () => {
 
 const Hero = () => {
     return (
-        <div>
-            <section>
-                <h1 className="text-white pt-24">Hello</h1>
-            </section>
-        </div>
-    )
-        {/* <section className="bg-bkg-green relative">
+        <section className="bg-bkg-green relative">
             <BlurEffect>
                 <Container classes="bg_people">
                     <div className="flex justify-center sm:justify-start">
@@ -76,8 +70,8 @@ const Hero = () => {
                     </div>
                 </Container>
             </BlurEffect>
-        </section>*/}
-
+        </section>
+    )
 }
 
 export default Hero
