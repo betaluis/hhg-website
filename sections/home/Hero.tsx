@@ -1,8 +1,8 @@
+"use client"
 import PowerButton from "@/components/PowerButton"
 import Button from "@/components/Button"
 import Container from "@/components/Container"
 import BlurEffect from "@/components/BlurEffect"
-
 
 const Heading = () => {
     return (

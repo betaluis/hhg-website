@@ -11,17 +11,19 @@ interface HeadingProps extends TextProps{
 
 export const Text = ({ children, color = "light", classes, bold }: TextProps) => {
     return (
-        <div 
-            className={
-                `text-center text-sm
-                sm:text-left sm:text-base
-                lg:text-lg 
-                ${color === "light" ? "text-content-light" : color === "dark" ? "text-content-dark" : "" } 
-                ${classes} ${bold ? "font-bold" : ""}`
-            }
+        <p
+            className={`
+                text-sm mt-4 max-w-2xl
+                sm:mt-3 
+                md:text-sm md:mt-2 
+                ${color === "light" ? "text-content-light-1" : "text-content-dark-1"}
+                ${bold ? "font-bold" : ""}
+                ${classes}
+            `}
         >
             {children}
-        </div>
+        </p>
+
     )
 }
 
