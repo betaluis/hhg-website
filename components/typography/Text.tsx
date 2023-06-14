@@ -75,3 +75,4 @@ export const SubText = ({ children, color, bold = false, classes }: TextProps) =
         </p>
     )
 }
+

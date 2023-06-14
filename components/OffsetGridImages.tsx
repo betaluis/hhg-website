@@ -1,6 +1,7 @@
 "use client"
-import { motion } from "framer-motion"
+import Container from "@/components/Container";
 import useScreenWidth from "../hooks/useScreenWidth"
+import { motion } from "framer-motion"
 import { Heading, SubText } from "./typography/Text";
 
 const OffsetGridImages = () => {
@@ -18,9 +19,8 @@ const OffsetGridImages = () => {
 
     return (
         <div className="
-                grid grid-cols-1 gap-8 pt-4 
-                lg:grid-cols-2 lg:pt-32 lg:pb-32
-            "
+            grid grid-cols-1 gap-8 pt-4 
+            lg:grid-cols-2 lg:pt-32 lg:pb-32"
         >
             <motion.div
                 initial="hidden"
