@@ -1,4 +1,3 @@
-"use client"
 import PowerButton from "@/components/PowerButton"
 import Button from "@/components/Button"
 import Container from "@/components/Container"
@@ -62,9 +61,6 @@ const Hero = () => {
         <section className="bg-bkg-green relative">
             <BlurEffect>
                 <Container classes="bg_people">
-                    <h1 className="text-white text-3xl pt-24">
-                        Hello World
-                    </h1>
                     <div className="flex justify-center sm:justify-start">
                         <div className="pt-24 pb-44 sm:py-32 lg:py-14">
                             <Heading />
