@@ -26,11 +26,11 @@ const GlowCards = ({ product, classes, handleMouse }: Props) => {
         >
             <div className="
                 card-content group-hover:bg-[hsl(220,23%,93%)]
-                absolute top-0 left-0 w-[calc(100%-2px)] h-[calc(100%-2px)] bg-bkg-light m-[1px] 
+                absolute top-0 left-0 w-[calc(100%-2px)] h-[calc(100%-2px)] bg-bkg-light-1 m-[1px] 
                 rounded-lg p-4 z-[2] 
             "></div>
             <div className="z-10 relative">
-                <Link href={product.href} className="text-center text-sm md:hover:bg-hover-gray">
+                <Link href={product.href} className="text-center text-sm md:hover:bg-hover-gray focus:outline-green-600">
                     <div className="flex justify-center items-end">
                         <Image
                             src={product.image.src}

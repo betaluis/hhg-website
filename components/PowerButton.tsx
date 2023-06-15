@@ -1,12 +1,11 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface Props {
-    type?: "small" | "pill" | "large";
+    type?: "small" | "pill";
 }
 
-const PowerButton = ({ type = "large" }: Props) => {
+const PowerButton = ({ type = "pill" }: Props) => {
 
     const [isOn, setIsOn] = useState(true);
 
@@ -66,30 +65,6 @@ const PowerButton = ({ type = "large" }: Props) => {
         </div> 
     )
 
-    return (
-        <div className={`
-                rounded-full grid place-items-center 
-                relative z-[4] bg-bkg-powerButton
-                power-button-shadow cursor-pointer
-                w-32 h-32
-            `}
-            onClick={handleClick}
-        >
-            <div 
-                className={`
-                w-1/3 h-1/3 rounded-full bg-bkg-neon
-                relative transition-shadow duration-500
-                before:bg-bkg-powerButton before:absolute
-                before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2
-                before:h-5/6 before:w-5/6 before:rounded-full
-                after:bg-bkg-neon after:absolute after:top-[10%] after:left-1/2 
-                after:-translate-x-1/2 after:-translate-y-1/2
-                after:h-[40%] after:w-1/12 after:rounded-2xl after:shadow-glow 
-                power-button_inner
-                `}
-            ></div>
-        </div>
-    )
 }
 
 export default PowerButton

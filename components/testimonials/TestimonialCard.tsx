@@ -151,7 +151,7 @@ const TestimonialCard = ({ testimonial }: Props) => {
             </div>
             <dialog ref={dialogRef}
                 className="
-                    bg-bkg-light mx-[20px] p-8 rounded-lg 
+                    bg-bkg-light-1 mx-[20px] p-8 rounded-lg 
                     max-w-2xl shadow-[0px_4px_5px_2px_rgba(0,0,0,0.2)] 
                     md:mx-auto backdrop:bg-[rgba(0,0,0,.5)] backdrop:backdrop-blur-sm
                 "

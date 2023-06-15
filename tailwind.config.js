@@ -18,17 +18,16 @@ module.exports = {
                     dark: {
                         1: "hsl(var(--content-dark) / <alpha-value>)",
                         2: "hsl(var(--content-dark-2) / <alpha-value>)",
+                        3: "hsl(var(--content-dark-3) / <alpha-value>)",
                     }
                 },
                 bkg: {
                     green: "hsl(var(--bkg-green) / <alpha-value>)",
-                    light: "hsl(var(--bkg-light) / <alpha-value>)",
+                    light: {
+                        1: "hsl(var(--bkg-light) / <alpha-value>)",
+                        2: "hsl(var(--bkg-light-2) / <alpha-value>)",
+                    },
                     white: "hsl(var(--bkg-white) / <alpha-value>)",
-                    powerButton: "hsl(var(--bkg-power-button) / <alpha-value>)",
-                    neon: "hsl(var(--bkg-neon) / <alpha-value>)",
-                },
-                accent: {
-                    green: "hsl(var(--accent-green) / <alpha-value>)",
                 },
                 hero: {
                     heading: "hsl(var(--hero-heading) / <alpha-value>)",
@@ -36,8 +35,8 @@ module.exports = {
                 hover: {
                     gray: "hsl(var(--hover-gray) / <alpha-value>)",
                 },
-                outlines: {
-                    "slate-to-gray": "hsl(var(--outline-slate-to-gray) / <alpha-value>)",
+                outlineColor: {
+                    1: "hsl(var(--outline-color-1) / <alpha-value>)",
                 },
             },
             backgroundImage: {

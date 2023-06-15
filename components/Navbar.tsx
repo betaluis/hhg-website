@@ -21,14 +21,14 @@ interface NavListProps {
 const SubList = ({ items }: { items: NavItem[] }) => {
     return (
         <ul className="
-            rounded-lg absolute -left-12 top-14 bg-bkg-light min-w-[280px] p-4 opacity-0 pointer-events-none
+            rounded-lg absolute -left-12 top-14 bg-bkg-light-1 min-w-[280px] p-4 opacity-0 pointer-events-none
             group-hover:pointer-events-auto group-hover:opacity-100 duration-150 transition-opacity 
             before:h-4 before:w-full before:absolute before:-top-4 before:left-0 before:bg-red-800 before:opacity-0 
             after:absolute after:-top-3 after:left-[31%]
             after:h-0 after:w-0
             after:border-r-transparent after:border-r-[20px] 
             after:border-l-transparent after:border-l-[20px] 
-            after:border-b-bkg-light after:border-b-[20px]
+            after:border-b-bkg-light-1 after:border-b-[20px]
         ">
             {items && items.map(({ href, label, icon }, index) => (
                 <Link key={index} href={href}>
@@ -78,7 +78,7 @@ const NavList = ({ links, mr, ml }: NavListProps): JSX.Element => (
 const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
 
     return (
-        <nav className="bg-bkg-light relative z-20">
+        <nav className="bg-bkg-light-1 relative z-20">
 
             {/* desktop navigation */}
             <Container>

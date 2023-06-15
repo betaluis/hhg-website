@@ -2,11 +2,16 @@ import PowerButton from "@/components/PowerButton"
 import Button from "@/components/Button"
 import Container from "@/components/Container"
 import BlurEffect from "@/components/BlurEffect"
+import Form from "@/components/Form"
 
 const Heading = () => {
     return (
         <div className="pt-8 sm:pt-4 lg:pt-0">
-            <h1 className="text-center sm:text-left text-3xl sm:text-4xl lg:text-5xl font-black text-hero-heading">
+            <h1 className="
+                text-center text-3xl font-black text-hero-heading
+                sm:text-4xl sm:text-left 
+                lg:text-6xl"
+            >
                 We are mobile <span className="power">power.</span>
             </h1>
         </div>
@@ -60,12 +65,15 @@ const Hero = () => {
     return (
         <section className="bg-bkg-green relative">
             <BlurEffect>
-                <Container classes="bg_people">
-                    <div className="flex justify-center sm:justify-start">
+                <Container classes="">
+                    <div className="flex justify-center sm:justify-between py-8">
                         <div className="pt-24 pb-44 sm:py-32 lg:py-14">
                             <Heading />
                             <Text />
                             <Buttons />
+                        </div>
+                        <div className="">
+                            <Form />
                         </div>
                     </div>
                 </Container>

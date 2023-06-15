@@ -7,7 +7,7 @@ const [feature1, feature2, feature3] = HomeFeatures;
 
 const Features = () => {
     return (
-        <div className="p-10 pt-14 bg-bkg-light rounded-xl flex gap-4">
+        <div className="p-10 pt-14 bg-bkg-light-1 rounded-xl flex gap-4">
             <FadeUp y={20} delay={.2} duration={0.3}>
                 <Feature title={feature1.title} description={feature1.description}>
                     <ScaleIn delay={2.2}>

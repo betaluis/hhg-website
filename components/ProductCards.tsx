@@ -22,7 +22,7 @@ const ProductGlowCards = ({ products }: Props) => {
     }
 
     return (
-        <section className="bg-bkg-light blur-group py-8 sm:py-12" onMouseMove={(e: React.MouseEvent) => handleMouse(e)}>
+        <section className="bg-bkg-light-1 blur-group py-8 sm:py-12" onMouseMove={(e: React.MouseEvent) => handleMouse(e)}>
             <Container>
                 <div className="grid grid-cols-2 gap-4 gap-y-4 sm:grid-cols-4">
                     {products && products.map((product, index) => (
