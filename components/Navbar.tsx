@@ -48,7 +48,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
 
 const NavItem = ({ href, label, sublist }: NavItem) => (
     <div className="relative group hover:bg-hover-gray">
-        <Link href={href}>
+        <Link href={href} className="outline-green-600">
             <li className="flex items-center gap-[1px] text-content-dark-1 py-2 px-3 group">
                 {label}
                 {sublist ? <ChevDown /> : null}

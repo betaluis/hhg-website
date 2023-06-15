@@ -6,12 +6,6 @@ interface Props {
     classes: string;
     handleMouse: (e: React.MouseEvent) => void;
 }
-// .gradient-blur {
-//     background-color: var(--bkg-green);
-//     width: 100%;
-//     height: 100%;
-//     position: relative;
-// }
 
 const GlowCards = ({ product, classes, handleMouse }: Props) => {
   return (
@@ -30,7 +24,7 @@ const GlowCards = ({ product, classes, handleMouse }: Props) => {
                 rounded-lg p-4 z-[2] 
             "></div>
             <div className="z-10 relative">
-                <Link href={product.href} className="text-center text-sm md:hover:bg-hover-gray focus:outline-green-600">
+                <Link href={product.href} className="text-center text-sm md:hover:bg-hover-gray outline-green-600" tabIndex={0}>
                     <div className="flex justify-center items-end">
                         <Image
                             src={product.image.src}
