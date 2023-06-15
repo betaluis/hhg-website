@@ -15,16 +15,18 @@
 
             --content-light: 210deg 40% 96%;        /* #f1f5f9 || #dadce2 */
             --content-light-2: 210deg 40% 96%;      /* #f1f5f9 || #94949e */
-            --content-dark: 210deg 40% 96%;         /* #494950 || #dadce2 */
-            --content-dark-2: 210deg 40% 96%;       /* #000000 || #dadce2 */
-            --content-dark-3: 0deg 0% 100%;         /* #000000 || #94949e */
+
+            /* TODO: Fix content dark 1 and 2 */
+            --content-dark: 240deg 4% 30%;          /* #494950 || #dadce2 */
+            --content-dark-2: 240deg 0% 0%;         /* #000000 || #dadce2 */
+            --content-dark-3: 240deg 0% 0%;         /* #000000 || #94949e */
 
             --hero-heading: 210deg 40% 96%;         /* #f1f5f9 || #dadce2 */
 
             --bkg-green: 142deg 76% 36%;            /* #16A34A || #18181b */
             --bkg-white: 0deg 0% 100%;              /* #ffffff || #18181b */
             --bkg-light: 210deg 40% 96%;            /* #f1f5f9 || #2e2e32 */
-            --bkg-light-2: 215deg 20% 65%;          /* #e2e8f0 || #18181b */
+            --bkg-light-2: 215deg 31.8% 91.4%;      /* #E2E8F0 || #18181b */
 
             --hover-gray: 220deg 13% 91%;           /* #e5e7eb || #222225 */
 
@@ -39,8 +41,9 @@
             --green-gradient-from-hover: 141.89999999999998deg 69.2% 40%;       /* #1fad53 || #1fad53 */
             --green-gradient-to-hover: 141.7deg 76.6% 59%;                      /* #46e780 || #46e780 */
 
-            /* Outlines Color */
+            /* Outline Colors */
             --outline-color-1: 0deg 0% 80%;                                    /* #bfbfbf || #404040 */
+            --outline-color-2: 210deg 40% 96.1%;
         }
        :root[data-theme="dark"] {
             --primary: 141.89999999999998deg 69.2% 58%;
@@ -132,6 +135,7 @@
 
             /* Used for Outlines */
             --outline-color-1: 0deg 0% 80%;                                    
+            --outline-color-2: 210deg 40% 96.1%;
         }
     }
 }
@@ -147,90 +151,6 @@ body {
 }
 
 /* Background Images */
-.bg_people {
-    background-image: url('/people-min.png');
-    background-repeat: no-repeat;
-    background-position: 480px 20px;
-    background-size: 550px auto;
-    -webkit-background-size: 550px auto;
-    -moz-background-size: 550px auto;
-    -o-background-size: 550px auto;
-}
-.bg_ambulance {
-    height: 300px;
-    width: 1000px;
-    background-image: url('/vehicles/ambulance.png');
-    background-repeat: no-repeat;
-    background-position: 480px 40px;
-    background-size: 550px auto;
-    -webkit-background-size: 550px auto;
-    -moz-background-size: 550px auto;
-    -o-background-size: 550px auto;
-    position: absolute;
-    top: 220px;
-    right: 140px;
-    z-index: 4;
-    transform: scale(0.6);
-}
-.bg_firetruck  {
-    height: 300px;
-    width: 1000px;
-    background-image: url('/vehicles/firetruck.png');
-    background-repeat: no-repeat;
-    background-position: 480px 40px;
-    background-size: 550px auto;
-    -webkit-background-size: 550px auto;
-    -moz-background-size: 550px auto;
-    -o-background-size: 550px auto;
-    position: absolute;
-    top: 210px;
-    right: -80px;
-    z-index: 4; 
-    transform: scale(0.8);
-}
-@media screen and (max-width: 1026px) {
-    .bg_people {
-        background-position: 420px 120px;
-    }
-}
-@media screen and (max-width: 779px) {
-    .bg_people {
-        background-position: 400px 120px;
-    }
-}
-@media screen and (max-width: 690px) {
-    .bg_people {
-        background-position: 300px 120px;
-    }
-}
-@media screen and (max-width: 640px) {
-    .bg_people {
-        background: url('/military-min.png') 25% 500px no-repeat, url("/construction-worker-min.png") 55% 500px no-repeat, url("/fire-min.png") 80% 500px no-repeat;
-        background-size: 140px auto;
-        -webkit-background-size: 140px auto;
-        -moz-background-size: 140px auto;
-        -o-background-size: 140px auto;
-    }
-}
-@media screen and (max-width: 427px) {
-    .bg_people {
-        background: url('/military-min.png') 25% 490px no-repeat, url("/construction-worker-min.png") 55% 490px no-repeat, url("/fire-min.png") 80% 490px no-repeat;
-        background-size: 140px auto;
-        -webkit-background-size: 140px auto;
-        -moz-background-size: 140px auto;
-        -o-background-size: 140px auto;
-    }
-}
-@media screen and (max-width: 371px) {
-    .bg_people {
-        background: url('/military-min.png') 15% 545px no-repeat, url("/construction-worker-min.png") 60% 545px no-repeat, url("/fire-min.png") 90% 545px no-repeat;
-        background-size: 140px auto;
-        -webkit-background-size: 140px auto;
-        -moz-background-size: 140px auto;
-        -o-background-size: 140px auto;
-    }
-}
-
 /* Gradient Blur Hover Effect (section type) */
 .gradient-blur:hover::before,
 .gradient-blur:hover::after{

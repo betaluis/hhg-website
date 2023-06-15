@@ -37,6 +37,7 @@ module.exports = {
                 },
                 outlineColor: {
                     1: "hsl(var(--outline-color-1) / <alpha-value>)",
+                    2: "hsl(var(--outline-color-2) / <alpha-value>)",
                 },
             },
             backgroundImage: {

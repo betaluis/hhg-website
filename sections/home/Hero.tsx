@@ -20,17 +20,15 @@ const Heading = () => {
 
 const Text = () => {
     return (
-        <div className="py-2 max-w-lg m-auto sm:m-0">
-            <div className="pt-2 pb-2">
-                <div className="
-                    relative text-content-light-2 text-center text-sm
-                    sm:leading-8 sm:text-left sm:text-base
-                    lg:text-lg"
-                >
-                    <span>Cutting edge solutions for uninterrupted operation and reliable power when engine is</span>
-                    <div className="relative pt-4 sm:bottom-[-12px] sm:absolute sm:right-[50%] lg:right-[33%]">
-                        <PowerButton type="pill" />
-                    </div>
+        <div className="pt-6 pb-4 max-w-lg m-auto sm:m-0">
+            <div className="
+                relative text-content-light-2 text-center text-sm
+                sm:leading-8 sm:text-left sm:text-base
+                lg:text-lg"
+            >
+                <span>Cutting edge solutions for uninterrupted operation and reliable power when engine is</span>
+                <div className="relative pt-4 sm:bottom-[-12px] sm:absolute sm:right-[50%] lg:right-[33%]">
+                    <PowerButton type="pill" />
                 </div>
             </div>
         </div>
@@ -65,7 +63,7 @@ const Hero = () => {
     return (
         <section className="bg-bkg-green relative">
             <BlurEffect>
-                <Container classes="">
+                <Container classes="bg_people">
                     <div className="flex justify-center sm:justify-between py-8">
                         <div className="pt-24 pb-44 sm:py-32 lg:py-14">
                             <Heading />

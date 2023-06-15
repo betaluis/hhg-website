@@ -98,7 +98,7 @@ const MobileMenu = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2, ease: 'easeInOut' }}
                     >
-                        <div className={`fixed top-[69px] inset-0 overflow-y-scroll bg-bkg-light`}>
+                        <div className={`fixed top-[69px] inset-0 overflow-y-scroll bg-bkg-light-1`}>
                             <motion.div
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: 0 }}

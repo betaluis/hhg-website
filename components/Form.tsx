@@ -48,6 +48,8 @@ const Button = () => {
 }
 
 const Form = () => {
+    // TODO: Mobile responsiveness
+    // TODO: Add form validation
     return (
         <div className="
             flex flex-1 flex-col justify-center
