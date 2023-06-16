@@ -3,6 +3,7 @@ import Button from "@/components/Button"
 import Container from "@/components/Container"
 import BlurEffect from "@/components/BlurEffect"
 import Form from "@/components/Form"
+import { FadeUp, ScaleIn } from "@/components/Animations"
 
 const Heading = () => {
     return (
@@ -47,8 +48,8 @@ const Buttons = () => {
                 largeMobile={true}
             />
             <Button
-                label="Get in touch"
-                href="/"
+                label="Industries"
+                href="/industries"
                 bold={true}
                 textColor="light"
                 className="bg-green-gradient hover:bg-green-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(22,101,52,1)]"
@@ -63,15 +64,19 @@ const Hero = () => {
     return (
         <section className="bg-bkg-green relative">
             <BlurEffect>
-                <Container classes="bg_people">
+                <Container>
                     <div className="flex justify-center sm:justify-between py-8">
-                        <div className="pt-24 pb-44 sm:py-32 lg:py-14">
-                            <Heading />
-                            <Text />
-                            <Buttons />
-                        </div>
+                        <FadeUp delay={1}>
+                            <div className="pt-24 pb-44 sm:py-32 lg:py-14">
+                                <Heading />
+                                <Text />
+                                <Buttons />
+                            </div>
+                        </FadeUp>
                         <div className="">
-                            <Form />
+                            <FadeUp delay={1.8}>
+                                <Form />
+                            </FadeUp>
                         </div>
                     </div>
                 </Container>

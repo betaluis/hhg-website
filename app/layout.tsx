@@ -2,6 +2,7 @@ import { leftNavItems, rightNavItems } from '@/data/NavLinks';
 import './globals.css'
 
 import Navbar from '@/components/Navbar';
+import { FadeIn } from '@/components/Animations';
 
 export const metadata = {
     title: "Harrison Hydra-Gen",
@@ -17,13 +18,15 @@ export default function RootLayout({ children }: Props) {
     return (
         <html lang="en" data-theme="light">
             <body className="bg-slate-100">
-                <Navbar
-                    leftNavItems={leftNavItems}
-                    rightNavItems={rightNavItems}
-                />
-                <main>
-                    {children}
-                </main>
+                <FadeIn>
+                    <Navbar
+                        leftNavItems={leftNavItems}
+                        rightNavItems={rightNavItems}
+                    />
+                    <main>
+                        {children}
+                    </main>
+                </FadeIn>
             </body>
         </html>
     )

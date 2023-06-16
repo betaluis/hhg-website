@@ -8,6 +8,21 @@ interface Props {
     duration?: number
 }
 
+export const FadeIn = ({ children, delay = 0, duration = 1}: Props) => {
+    return (
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: duration, delay: delay }}
+            variants={{
+                visible: { opacity: 1 },
+                hidden: { opacity: 0 }            
+            }}
+        >{children}</motion.div>
+    )
+};
+
 export const FadeUp = ({ children, y = 50, delay = 0, duration = 1}: Props) => {
     return (
         <motion.div

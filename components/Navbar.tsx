@@ -23,7 +23,7 @@ const SubList = ({ items }: { items: NavItem[] }) => {
         <ul className="
             rounded-lg absolute -left-12 top-14 bg-bkg-light-1 min-w-[280px] p-4 opacity-0 pointer-events-none
             group-hover:pointer-events-auto group-hover:opacity-100 duration-150 transition-opacity 
-            before:h-4 before:w-full before:absolute before:-top-4 before:left-0 before:bg-red-800 before:opacity-0 
+            before:h-4 before:w-full before:absolute before:-top-4 before:left-0 before:opacity-0 
             after:absolute after:-top-3 after:left-[31%]
             after:h-0 after:w-0
             after:border-r-transparent after:border-r-[20px] 

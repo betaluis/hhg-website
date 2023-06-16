@@ -19,7 +19,7 @@
             /* TODO: Fix content dark 1 and 2 */
             --content-dark: 240deg 4% 30%;          /* #494950 || #dadce2 */
             --content-dark-2: 240deg 0% 0%;         /* #000000 || #dadce2 */
-            --content-dark-3: 240deg 0% 0%;         /* #000000 || #94949e */
+            --content-dark-3: 240deg 4% 40%;        /* #62626a || #94949e */
 
             --hero-heading: 210deg 40% 96%;         /* #f1f5f9 || #dadce2 */
 
@@ -42,7 +42,7 @@
             --green-gradient-to-hover: 141.7deg 76.6% 59%;                      /* #46e780 || #46e780 */
 
             /* Outline Colors */
-            --outline-color-1: 0deg 0% 80%;                                    /* #bfbfbf || #404040 */
+            --outline-color-1: 215deg 31.8% 91.4%;                                    /* #bfbfbf || #404040 */
             --outline-color-2: 210deg 40% 96.1%;
         }
        :root[data-theme="dark"] {
@@ -114,7 +114,7 @@
             --content-light-2: 210deg 40% 96%;
             --content-dark: 240deg 4% 30%;
             --content-dark-2: 240deg 0% 0%;
-            --content-dark-3: 240deg 0% 0%;
+            --content-dark-3: 240deg 4% 40%;
             --hero-heading: 210deg 40% 96%;
 
             --bkg-green: 142deg 76% 36%;
@@ -134,7 +134,7 @@
             --green-gradient-to-hover: 141.7deg 76.6% 59%;
 
             /* Used for Outlines */
-            --outline-color-1: 0deg 0% 80%;                                    
+            --outline-color-1: 215deg 31.8% 91.4%;                                    
             --outline-color-2: 210deg 40% 96.1%;
         }
     }

@@ -12,21 +12,21 @@ const Input = ({ text, type, required }: { text: string, type: "text" | "email",
     return (
         <div>
             <label htmlFor={text} className="block text-sm font-medium leading-6 text-content-dark-1">
-                {text.charAt(0).toUpperCase() + text.slice(1)}
+                <div className="mt-2">
+                    <input
+                        id={text}
+                        name={text}
+                        type={type}
+                        autoComplete={text}
+                        required={required}
+                        placeholder={text.charAt(0).toUpperCase() + text.slice(1)}
+                        className="block w-full rounded-md border-0 py-3 bg-bkg-light-2
+                        text-content-dark-1 outline-none ring-1
+                        ring-outlineColor-1 placeholder:text-content-dark-3 focus:ring-2 pl-2
+                        focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
+                    />
+                </div>
             </label>
-            <div className="mt-2">
-                <input
-                    id={text}
-                    name={text}
-                    type={type}
-                    autoComplete={text}
-                    required={required}
-                    className="block w-full rounded-md border-0 py-1.5 bg-bkg-light-2
-                    text-content-dark-1 shadow-sm ring-1 ring-inset outline-none
-                    ring-outlineColor-1 placeholder:text-content-dark-1 focus:ring-2 pl-2
-                    focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
-                />
-            </div>
         </div>
     )
 }
@@ -37,7 +37,7 @@ const Button = () => {
             <button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-dark-gradient 
-                px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm 
+                px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm 
                 hover:bg-dark-gradient-hover
                 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
