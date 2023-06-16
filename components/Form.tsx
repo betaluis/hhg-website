@@ -8,7 +8,7 @@ const Title = () => {
     )
 }
 
-const Input = ({ text, type, required }: { text: string, type: "text" | "email", required: boolean }) => {
+const Input = ({ text, type, required }: { text: string, type: "text" | "email" | "tel" , required: boolean }) => {
     return (
         <div>
             <label htmlFor={text} className="block text-sm font-medium leading-6 text-content-dark-1">
@@ -41,7 +41,7 @@ const Button = () => {
                 hover:bg-dark-gradient-hover
                 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
-                Send Message
+                Request a quote
             </button>
         </div>
     )
@@ -62,6 +62,7 @@ const Form = () => {
                     <Input text="name" type="text" required={true} /> 
                     <Input text="email" type="email" required={true} /> 
                     <Input text="company" type="text" required={true} /> 
+                    <Input text="phone" type="tel" required={true} /> 
                     <Button />
                 </form>
                 <p className="mt-10 text-center text-sm text-content-dark-3 max-w-[300px]">

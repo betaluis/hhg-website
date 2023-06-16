@@ -83,7 +83,7 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
             {/* desktop navigation */}
             <Container>
                 <div className="hidden lg:flex items-center justify-between">
-                    <Link href="/" className="pr-3">
+                    <Link href="/" className="pr-3 focus:outline-green-600">
                         <Image src="/hPower.svg" alt="Harrison Hydra-Gen Logo" width={30} height={30} />
                     </Link>
                     <NavList links={leftNavItems} mr={true} />
