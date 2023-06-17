@@ -52,7 +52,7 @@ const Form = () => {
     // TODO: Add form validation
     return (
         <div className="
-            flex flex-1 flex-col justify-center
+            flex flex-1 flex-col justify-center max-w-sm
             px-6 py-8 rounded-lg bg-bkg-light-1 min-h-full 
             lg:px-8"
         >

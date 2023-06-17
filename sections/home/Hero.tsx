@@ -3,15 +3,16 @@ import Button from "@/components/Button"
 import Container from "@/components/Container"
 import BlurEffect from "@/components/BlurEffect"
 import Form from "@/components/Form"
-import { FadeUp, ScaleIn } from "@/components/Animations"
+import { FadeUp } from "@/components/Animations"
 
 const Heading = () => {
     return (
         <div className="pt-8 sm:pt-4 lg:pt-0">
             <h1 className="
                 text-center text-3xl font-black text-hero-heading
-                sm:text-4xl sm:text-left 
-                lg:text-6xl"
+                sm:text-6xl 
+                md:text-7xl 
+                lg:text-6xl lg:text-left"
             >
                 We are mobile <span className="power">power.</span>
             </h1>
@@ -21,14 +22,14 @@ const Heading = () => {
 
 const Text = () => {
     return (
-        <div className="pt-6 pb-4 max-w-lg m-auto sm:m-0">
+        <div className="pt-6 pb-4 max-w-lg m-auto lg:m-0">
             <div className="
                 relative text-content-light-2 text-center text-sm
-                sm:leading-8 sm:text-left sm:text-base
-                lg:text-lg"
+                sm:leading-8 sm:text-base
+                lg:text-lg lg:text-left lg:leading-9"
             >
                 <span>Cutting edge solutions for uninterrupted operation and reliable power when engine is</span>
-                <div className="relative pt-4 sm:bottom-[-12px] sm:absolute sm:right-[50%] lg:right-[33%]">
+                <div className="relative sm:bottom-[-12px] lg:absolute lg:right-[33%]">
                     <PowerButton type="pill" />
                 </div>
             </div>
@@ -38,7 +39,11 @@ const Text = () => {
 
 const Buttons = () => {
     return (
-        <div className="mt-2 flex flex-col sm:flex-row gap-4">
+        <div className="
+            mt-2 flex flex-col gap-4
+            sm:justify-center sm:flex-row sm:mt-8
+            lg:justify-start lg:mt-4
+        ">
             <Button
                 label="Products"
                 href="/products"
@@ -65,7 +70,7 @@ const Hero = () => {
         <section className="bg-bkg-green relative">
             <BlurEffect>
                 <Container>
-                    <div className="flex justify-center sm:justify-between py-8">
+                    <div className="flex justify-center flex-col lg:flex-row sm:justify-between py-8">
                         <FadeUp delay={1}>
                             <div className="pt-24 pb-44 sm:py-32 lg:py-14">
                                 <Heading />
