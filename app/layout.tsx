@@ -3,6 +3,7 @@ import './globals.css'
 
 import Navbar from '@/components/Navbar';
 import { FadeIn } from '@/components/Animations';
+import Footer from '@/components/Footer';
 
 export const metadata = {
     title: "Harrison Hydra-Gen",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Props) {
                     <main>
                         {children}
                     </main>
+                    <Footer />
                 </FadeIn>
             </body>
         </html>
