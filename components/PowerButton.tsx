@@ -1,5 +1,5 @@
 "use client";
-import { useState, KeyboardEvent, useEffect } from "react";
+import { useState, KeyboardEvent } from "react";
 
 interface Props {
     type: "small" | "pill";
@@ -31,7 +31,7 @@ const PowerButton = ({ type = "pill" }: Props) => {
             setIsOn(!isOn);
             changeTheme();
         }
-    
+
     }
 
     if (type === "small") {
@@ -53,31 +53,31 @@ const PowerButton = ({ type = "pill" }: Props) => {
                 onClick={handleClick}
                 onKeyDown={handleKeyDown}
                 className="
-                    relative bg-green-600 inline-block w-20 h-8 rounded-full cursor-pointer
-                    shadow-[inset_3px_3px_4px_0_rgba(21,128,61,1),inset_0px_0px_1px_0_rgba(0,0,0,0.4)]"
+                relative bg-green-600 inline-block w-20 h-8 rounded-full cursor-pointer
+                shadow-[inset_3px_3px_4px_0_rgba(21,128,61,1),inset_0px_0px_1px_0_rgba(0,0,0,0.4)]"
             >
                 <div
                     className={`
-                        absolute h-6 w-6 rounded-full top-1/2 right-0
-                        -translate-y-1/2 transition-transform ease-in-out duration-300
-                        z-10 shadow-[2px_2px_2px_0_rgba(21,128,61,1),0px_0px_4px_0_rgba(0,0,0,0.25)]
-                        ${isOn ? "bg-green-600 translate-x-[-5px]" : "bg-gray-200 -translate-x-[52px]"}
+                    absolute h-6 w-6 rounded-full top-1/2 right-0
+                    -translate-y-1/2 transition-transform ease-in-out duration-300
+                    z-10 shadow-[2px_2px_2px_0_rgba(21,128,61,1),0px_0px_4px_0_rgba(0,0,0,0.25)]
+                    ${isOn ? "bg-green-600 translate-x-[-5px]" : "bg-gray-200 -translate-x-[52px]"}
                     `}
                 ></div>
                 <div
                     className={`
-                        absolute top-[3px]
-                        transition-all text-lg font-bold duration-300 text-white
-                        ${isOn ? "opacity-0 right-[6px]" : "opacity-100 right-[12px]"}
+                    absolute top-[3px]
+                    transition-all text-lg font-bold duration-300 text-white
+                    ${isOn ? "opacity-0 right-[6px]" : "opacity-100 right-[12px]"}
                     `}
                 >
                     OFF
                 </div>
                 <div
                     className={`
-                        absolute top-[3px] 
-                        text-lg font-bold transition-all duration-300 text-white
-                        ${isOn ? "opacity-100 left-[14px]" : "opacity-0 left-[8px]"}
+                    absolute top-[3px] 
+                    text-lg font-bold transition-all duration-300 text-white
+                    ${isOn ? "opacity-100 left-[14px]" : "opacity-0 left-[8px]"}
                     `}
                 >
                     ON

@@ -3,8 +3,10 @@ import NewSection from "@/components/NewSection";
 
 const FeaturesSection = () => {
   return (
-    <NewSection bgColor="bg-bkg-white">
-        <Features />
+    <NewSection bgColor="bg-bkg-white" padding="pt-20" gutters={false}>
+        <div className="md:px-[20px]">
+            <Features />
+        </div>
     </NewSection>
   )
 }

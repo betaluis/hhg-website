@@ -9,7 +9,7 @@ const Heading = () => {
     return (
         <div className="pt-8 sm:pt-4 lg:pt-0">
             <h1 className="
-                text-center text-3xl font-black text-hero-heading
+                text-center text-4xl font-black text-hero-heading
                 sm:text-6xl 
                 md:text-7xl 
                 lg:text-6xl lg:text-left"
@@ -29,7 +29,7 @@ const Text = () => {
                 lg:text-lg lg:text-left lg:leading-9"
             >
                 <span>Cutting edge solutions for uninterrupted operation and reliable power when engine is</span>
-                <div className="relative sm:bottom-[-12px] lg:absolute lg:right-[33%]">
+                <div className="relative pt-4 sm:bottom-[-12px] lg:absolute lg:right-[33%]">
                     <PowerButton type="pill" />
                 </div>
             </div>
@@ -70,9 +70,9 @@ const Hero = () => {
         <section className="bg-bkg-green relative">
             <BlurEffect>
                 <Container>
-                    <div className="flex justify-center flex-col lg:flex-row sm:justify-between py-8">
+                    <div className="flex justify-center flex-col lg:flex-row sm:justify-between pb-10 lg:pt-10">
                         <FadeUp delay={1}>
-                            <div className="pt-24 pb-44 sm:py-32 lg:py-14">
+                            <div className="pt-24 pb-16">
                                 <Heading />
                                 <Text />
                                 <Buttons />

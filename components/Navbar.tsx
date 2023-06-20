@@ -99,20 +99,24 @@ const Navbar = ({ leftNavItems, rightNavItems }: Props) => {
                <Container fixed={true} outline={true}>
                     <div className="flex items-center justify-center py-2 lg:hidden">
                         <MobileMenu />
-                        <Image
-                            src="/white-logo.png"
-                            alt="Harrison Hydra-Gen logo"
-                            width={80}
-                            height={30}
-                            className="white-logo hidden dark:block mr-auto ml-auto w-auto h-auto"
-                        />
-                        <Image
-                            src="/logo.png"
-                            alt="Harrison Hydra-Gen logo"
-                            width={80}
-                            height={30}
-                            className="dark-logo dark:hidden mr-auto ml-auto w-auto h-auto"
-                        />
+                        <Link href={"/"} className="mr-auto ml-auto hidden dark:block white-logo" >
+                            <Image
+                                src="/white-logo.png"
+                                alt="Harrison Hydra-Gen logo"
+                                width={80}
+                                height={30}
+                                className="white-logo hidden dark:block w-auto h-auto"
+                            />
+                        </Link>
+                        <Link href={"/"} className="mr-auto ml-auto block dark:hidden dark-logo">
+                            <Image
+                                src="/logo.png"
+                                alt="Harrison Hydra-Gen logo"
+                                width={80}
+                                height={30}
+                                className="dark-logo dark:hidden mr-auto ml-auto w-auto h-auto"
+                            />
+                        </Link>
                         <div className="flex gap-4">
                             <Link href="/contact">
                                 <ContactIcon />

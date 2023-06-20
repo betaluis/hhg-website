@@ -52,9 +52,9 @@ const Form = () => {
     // TODO: Add form validation
     return (
         <div className="
-            flex flex-1 flex-col justify-center max-w-sm
+            flex flex-1 flex-col justify-center max-w-lg mx-auto
             px-6 py-8 rounded-lg bg-bkg-light-1 min-h-full 
-            lg:px-8"
+            lg:px-8 lg:max-w-sm"
         >
             <Title />
             <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -65,7 +65,7 @@ const Form = () => {
                     <Input text="phone" type="tel" required={true} /> 
                     <Button />
                 </form>
-                <p className="mt-10 text-center text-sm text-content-dark-3 max-w-[300px]">
+                <p className="mt-10 text-center text-sm text-content-dark-3 max-w-[300px] mx-auto">
                     We will never share your details with anyone. We won&apos;t spam you either.
                 </p>
             </div>

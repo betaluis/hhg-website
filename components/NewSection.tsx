@@ -4,12 +4,13 @@ interface NewSectionProps {
     children: React.ReactNode,
     padding?: string,
     bgColor: string,
+    gutters?: boolean,
 }
 
-const NewSection = ({ children, padding, bgColor }: NewSectionProps) => {
+const NewSection = ({ children, padding, bgColor, gutters = true, }: NewSectionProps) => {
     return (
         <section className={`${bgColor} ${padding}`}>
-            <Container>
+            <Container gutters={gutters}>
                 {children}
             </Container>
         </section>
