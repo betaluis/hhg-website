@@ -38,29 +38,24 @@ const Events = () => {
 
     useEffect(() => {
 
-        let scrollWidth: number = sliderWrapper.current?.scrollWidth || 0;
-        let offsetWidth: number = sliderWrapper.current?.offsetWidth || 0;
+        const setTheWidth = () => {
+          const slideWidth = sliderWrapper.current?.scrollWidth || 0;
+          const containerWidth = sliderWrapper.current?.offsetWidth || 0;
+          const slidesVisible = Math.floor(containerWidth / 320); 
+          const slideSpacing = 20;
+          const lastSlideOffset = Math.max(0, slidesVisible - 1) * 320;
+          const newWidth = Math.max(0, slideWidth - containerWidth + lastSlideOffset - slideSpacing);
+          setWidth(newWidth);;
+        }
 
-        setWidth(scrollWidth - offsetWidth);
+        setTheWidth();
 
-    }, [width])
-
-    useEffect(() => {
-        const handleResize = () => {
-            const slideWidth = sliderWrapper.current?.scrollWidth || 0;
-            const containerWidth = sliderWrapper.current?.offsetWidth || 0;
-            setWidth(slideWidth - containerWidth);
-        };
-
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-
+        window.addEventListener('resize', setTheWidth);
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', setTheWidth);
         };
-    }, []);
 
+        }, [width])
 
     return (
         <div className="py-64 bg-[url('/tradeshow.png')] bg-no-repeat bg-cover relative overflow-hidden">
@@ -68,13 +63,13 @@ const Events = () => {
                 <Container>
                     <h1 className="text-white">Events</h1>
                     <motion.div className="slider_wrapper" ref={sliderWrapper} whileTap={{cursor: "grabbing"}}>
-                        <motion.div className="inner flex gap-4"
+                        <motion.div className="inner inline-flex gap-4"
                             drag="x"
-                            dragConstraints={{ left: -width, right: 0 }}
+                            dragConstraints={{ left: -width - 180, right: 0 }}
                         >
                             {
                                 events.map((event, index) => (
-                                    <div key={index} className="card min-w-[300px] bg-white rounded-lg drop-shadow-2xl">
+                                    <div key={index} className="card min-w-[250px] lg:min-w-[300px] bg-white rounded-lg drop-shadow-2xl">
                                         <div className="card_img rounded-tr-lg rounded-tl-lg overflow-hidden">
                                             <img src={event.image} className="pointer-events-none object-cover w-full h-auto aspect-video" alt="" />
                                         </div>
