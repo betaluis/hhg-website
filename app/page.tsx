@@ -2,6 +2,7 @@ import Products from "@/data/Products";
 import ProductCards from "@/components/ProductCards";
 import { 
     CompanyAgeSection, 
+    Events, 
     FeaturesSection, 
     Hero, 
     TestimonialSection 
@@ -20,6 +21,8 @@ export default function Home() {
             <FeaturesSection />
 
             <TestimonialSection />
+
+            <Events />
         </>
     )
 }
