@@ -88,6 +88,7 @@ export const extraMobileNavLinks: NavItem[] = [
 
 export const leftNavItems: NavItem[] = [
     { href: "/products", label: "Products", sublist: productsNavItems },
+    { href: "/industries", label: "Industries", sublist: industriesNavItems },
     { href: "/news", label: "News" },
     { href: "/about", label: "About" },
 ];

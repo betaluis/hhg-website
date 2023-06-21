@@ -111,7 +111,12 @@ const FooterLink = ({ label, links }: { label: string; links: Link[] }) => {
             <ul role="list" className="mt-6 space-y-4">
                 {links.map((item) => (
                     <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                        <a href={item.href} 
+                            className="
+                            text-sm leading-6 text-gray-300 hover:text-white
+                            focus:ring-2 focus:ring-inset focus:ring-white/20
+                            outline-0"
+                        >
                             {item.name}
                         </a>
                     </li>
@@ -151,7 +156,7 @@ const SubscribeForm = () => (
                     bg-white/5 px-3 py-1.5 text-base text-content-light-1 shadow-sm 
                     ring-1 ring-inset ring-white/10 
                     placeholder:text-gray-400
-                    focus:ring-2 focus:ring-inset focus:ring-green-600
+                    focus:ring-2 focus:ring-inset focus:ring-white/20
                     sm:w-64 sm:text-sm sm:leading-6 
                     xl:w-full
                     "

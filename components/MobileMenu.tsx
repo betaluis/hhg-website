@@ -1,12 +1,12 @@
 "use client";
  
 import React, { useState, useEffect, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { extraMobileNavLinks, industriesNavItems, productsNavItems } from "@/data/NavLinks";
 import MenuIcon from '@/components/icons/MenuButton';
 import Button from '@/components/Button';
 import Divider from './Divider';
+import { motion, AnimatePresence } from 'framer-motion';
+import { extraMobileNavLinks, industriesNavItems, productsNavItems } from "@/data/NavLinks";
 
 interface LinksProps {
     links: NavItem[]; 

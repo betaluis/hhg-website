@@ -53,8 +53,8 @@ const Buttons = () => {
                 largeMobile={true}
             />
             <Button
-                label="Industries"
-                href="/industries"
+                label="Contact"
+                href="/contact"
                 bold={true}
                 textColor="light"
                 className="bg-green-gradient hover:bg-green-gradient-hover px-8 drop-shadow-[0_2px_0_rgba(22,101,52,1)]"
