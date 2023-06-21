@@ -99,10 +99,10 @@ const Events = () => {
                                             <img src={event.image} className="pointer-events-none object-cover w-full h-auto aspect-video" alt="" />
                                         </div>
                                         <div className="card_header p-4">
-                                            <div className="title pb-2 font-bold text-content-light-1">{event.title}</div>
-                                            <div className="subtitle pb-4 text-sm text-content-light-1">{event.description}</div>
+                                            <div className="title pb-2 font-bold text-content-dark-1">{event.title}</div>
+                                            <div className="subtitle pb-4 text-sm text-content-dark-1">{event.description}</div>
                                             <div>
-                                                <button className="bg-black text-white rounded-sm text-sm py-2 px-4">Learn More</button>
+                                                <button className="bg-content-dark-1 text-white rounded-sm text-sm py-2 px-4">Learn More</button>
                                             </div>
                                         </div>
                                     </div>
