@@ -5,54 +5,64 @@ import {motion} from 'framer-motion'
 
 const events = [
     {
-        title: 'Event 1',
+        title: 'ConExpo 2023',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events',
+        date: "March 14, 2023"
     },
     {
         title: 'Event 2',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&2',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 3',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&3',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 4',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&4',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 5',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&5',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 1',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 2',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&2',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 3',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&3',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 4',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&4',
+        date: "June 14, 2023"
     },
     {
         title: 'Event 5',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         image: 'https://source.unsplash.com/random/?events&5',
+        date: "July 23, 2023"
     }
 ]
 
@@ -75,18 +85,13 @@ const Events = () => {
 
         setTheWidth();
 
-        window.addEventListener('resize', setTheWidth);
-        return () => {
-            window.removeEventListener('resize', setTheWidth);
-        };
-
-        }, [width])
+    }, [width])
 
     return (
         <div className="py-80 bg-[url('/tradeshow.png')] bg-no-repeat bg-cover relative overflow-hidden">
             <div className='bg-gradient-radial from-white/0 to-black absolute inset-0 grid place-items-center'>
                 <Container>
-                    <h1 className="text-white mb-16 text-6xl">Upcoming Events</h1>
+                    <h2 className="text-white mb-16 text-5xl md:text-6xl leading-[3.5rem]">Upcoming <br className="block sm:hidden" /> Events</h2>
                     <motion.div className="slider_wrapper" ref={sliderWrapper} whileTap={{cursor: "grabbing"}}>
                         <motion.div className="inner inline-flex gap-4"
                             drag="x"
@@ -99,10 +104,11 @@ const Events = () => {
                                             <img src={event.image} className="pointer-events-none object-cover w-full h-auto aspect-video" alt="" />
                                         </div>
                                         <div className="card_header p-4">
-                                            <div className="title pb-2 font-bold text-content-dark-1">{event.title}</div>
-                                            <div className="subtitle pb-4 text-sm text-content-dark-1">{event.description}</div>
+                                            <div className="text-lg font-bold text-content-dark-2">{event.title}</div>
+                                            <div className="pb-2 text-xs text-gray-500">{event.date}</div>
+                                            <div className="pb-4 text-sm text-content-dark-2">{event.description}</div>
                                             <div>
-                                                <button className="bg-content-dark-1 text-white rounded-sm text-sm py-2 px-4">Learn More</button>
+                                                <button className="bg-black text-white rounded-sm text-sm py-2 px-4">Learn More</button>
                                             </div>
                                         </div>
                                     </div>
